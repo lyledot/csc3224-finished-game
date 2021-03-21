@@ -1904,7 +1904,7 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "snowball_static",
+              "name": "",
               "useMultipleDirections": false,
               "directions": [
                 {
