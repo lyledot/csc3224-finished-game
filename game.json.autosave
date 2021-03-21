@@ -716,6 +716,10 @@
     {
       "name": "score",
       "value": ""
+    },
+    {
+      "name": "seconds",
+      "value": ""
     }
   ],
   "layouts": [
@@ -2592,6 +2596,10 @@
         {
           "name": "invincibilityStateChanged",
           "value": ""
+        },
+        {
+          "name": "tempTimer",
+          "value": ""
         }
       ],
       "instances": [
@@ -2898,6 +2906,22 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "TimeElapsedText",
+          "persistentUuid": "dc8f9f09-eeef-4612-bb43-ec223f2612c1",
+          "width": 0,
+          "x": 14,
+          "y": 45,
+          "zOrder": 16,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -2968,25 +2992,6 @@
           }
         },
         {
-          "bold": true,
-          "italic": false,
-          "name": "ScoreNum",
-          "smoothed": true,
-          "tags": "",
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "behaviors": [],
-          "string": "0",
-          "font": "",
-          "characterSize": 20,
-          "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
-          }
-        },
-        {
           "bold": false,
           "italic": false,
           "name": "PressEnterToBeginText",
@@ -3022,6 +3027,25 @@
             "b": 138,
             "g": 138,
             "r": 138
+          }
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "TimeElapsedText",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "Time Elapsed: ",
+          "font": "",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
           }
         },
         {
@@ -3826,7 +3850,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Variables",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -3843,7 +3867,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Variables:\n\nGLOBAL: \nscore: keeps track of the player's points\n\nLOCAL:\nobstacleDirection: degree that the global force is applied to (270 degrees = up).\nobstacleSpeed: speed at which obstacles go up.\nsizeDecrease: how much to subtact from the scale of the snowball when it collides.\nsizeIncrease: how much to add to the scale of the snowball as the game goes on.\nspeedIncrease: how much to add to the speed of the snowball as the game goes on.\nspeedDecrease: how much to subtract to the speed of the snowball when it collides.\nsnowballSpeed: how fast the snowball goes\nstate: 0 = Game hasn't started, 1 = Game in action\ninvincibility: toggles if snowball can collide with objects or not - for DevControls. 0 = Disabled 1 = Enabled\ninvinciblityStateChanged: keeps track of if DevControls are enabled",
+              "comment": "Variables:\n\nGLOBAL: \nscore: keeps track of the player's points\n\nLOCAL:\nobstacleDirection: degree that the global force is applied to (270 degrees = up).\nobstacleSpeed: speed at which obstacles go up.\nsizeDecrease: how much to subtact from the scale of the snowball when it collides.\nsizeIncrease: how much to add to the scale of the snowball as the game goes on.\nspeedIncrease: how much to add to the speed of the snowball as the game goes on.\nspeedDecrease: how much to subtract to the speed of the snowball when it collides.\nsnowballSpeed: how fast the snowball goes\nstate: 0 = Game hasn't started, 1 = Game in action\ninvincibility: toggles if snowball can collide with objects or not - for DevControls. 0 = Disabled 1 = Enabled\ninvinciblityStateChanged: keeps track of if DevControls are enabled\nseconds: stores time elapsed in-game\ntempTimer: ????",
               "comment2": ""
             },
             {
@@ -3994,6 +4018,30 @@
                     "0"
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarGlobal"
+                  },
+                  "parameters": [
+                    "seconds",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "tempTimer",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": []
@@ -4072,7 +4120,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Game States",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -4525,7 +4573,7 @@
                         "textG": 0,
                         "textR": 0
                       },
-                      "comment": "Snowball gradually gets bigger and adds towards the score. \nObstacles also slowly gets faster.",
+                      "comment": "Snowball gradually gets bigger and adds towards the score. \nObstacles also slowly gets faster.\nTimer counting how long the user has been playing starts.",
                       "comment2": ""
                     },
                     {
@@ -4540,9 +4588,9 @@
                             "value": "TextObject::String"
                           },
                           "parameters": [
-                            "ScoreNum",
+                            "ScoreText",
                             "=",
-                            "ToString(GlobalVariable(score))"
+                            "\"Score: \" + ToString(GlobalVariable(score))"
                           ],
                           "subInstructions": []
                         },
@@ -4591,6 +4639,91 @@
                             "obstacleSpeed",
                             "+",
                             "0.1"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "tempTimer",
+                            "+",
+                            "TimeDelta()"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "TextObject::String"
+                          },
+                          "parameters": [
+                            "TimeElapsedText",
+                            "=",
+                            "\"Time Elapsed: \" + ToString(GlobalVariable(seconds)) + \"s\""
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "If the temptimer has started:",
+                      "comment2": ""
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "tempTimer",
+                            ">=",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "seconds",
+                            "+",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "tempTimer",
+                            "=",
+                            "0"
                           ],
                           "subInstructions": []
                         }
@@ -4681,7 +4814,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "Developer Controls",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -5073,25 +5206,9 @@
           "name": "FinalScore",
           "persistentUuid": "e110d198-069e-492a-bf6a-d29b09d6bcbb",
           "width": 0,
-          "x": 285,
-          "y": 273,
+          "x": 300,
+          "y": 275,
           "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "ScoreText",
-          "persistentUuid": "c775cc34-9bb7-4edb-ae9d-89e448f652fb",
-          "width": 0,
-          "x": 438,
-          "y": 271,
-          "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -5140,6 +5257,22 @@
           "x": 355,
           "y": 380,
           "zOrder": 8,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "TimeSurvived",
+          "persistentUuid": "03757888-fb42-4ef3-acc6-e00f6652caf3",
+          "width": 0,
+          "x": 295,
+          "y": 303,
+          "zOrder": 9,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -5223,25 +5356,6 @@
           }
         },
         {
-          "bold": true,
-          "italic": false,
-          "name": "ScoreText",
-          "smoothed": true,
-          "tags": "",
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "behaviors": [],
-          "string": "0",
-          "font": "",
-          "characterSize": 20,
-          "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
-          }
-        },
-        {
           "name": "SignArrowExit",
           "tags": "",
           "type": "Sprite",
@@ -5318,6 +5432,25 @@
               ]
             }
           ]
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "TimeSurvived",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "Time Rolled: ",
+          "font": "",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
         }
       ],
       "events": [
@@ -5392,9 +5525,21 @@
                     "value": "TextObject::String"
                   },
                   "parameters": [
-                    "ScoreText",
+                    "FinalScore",
                     "=",
-                    "ToString(GlobalVariable(score))"
+                    "\"Final Score: \" + ToString(GlobalVariable(score))"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "TimeSurvived",
+                    "=",
+                    "\"Time Rolled: \" + ToString(GlobalVariable(seconds))"
                   ],
                   "subInstructions": []
                 }
