@@ -17,5 +17,6 @@ The repository for the prototype can be found <a href="https://github.com/lyledo
 Playable here: https://lyledot.github.io/csc3224-finished-game/
 
 <h3>Asset credits:</h3>
-Snowball: https://www.gamedevmarket.net/asset/animated-snowball-game-projectile/
-Heavitas Font: https://www.creativefabrica.com/product/heavitas/ref/106/
+Snowball: https://www.gamedevmarket.net/asset/animated-snowball-game-projectile/<br>
+Heavitas Font: https://www.creativefabrica.com/product/heavitas/ref/106/<br>
+Arrow: http://www.pngmart.com/image/137859
