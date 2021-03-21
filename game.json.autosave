@@ -2441,6 +2441,8 @@
           "variables": [],
           "behaviors": [
             {
+              "name": "TopDownMovement",
+              "type": "TopDownMovementBehavior::TopDownMovementBehavior",
               "acceleration": 300,
               "allowDiagonals": true,
               "angleOffset": 0,
@@ -2449,9 +2451,7 @@
               "deceleration": 800,
               "ignoreDefaultControls": false,
               "maxSpeed": 200,
-              "name": "TopDownMovement",
               "rotateObject": false,
-              "type": "TopDownMovementBehavior::TopDownMovementBehavior",
               "viewpoint": "TopDown"
             }
           ],
