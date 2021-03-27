@@ -1,6 +1,6 @@
 
 
-<h1>Snowball Cruising</h1>
+# Snowball Cruising
 Project for CSC3224 - Computer Games Development.<br>
 A snowball game where you must become as large as possible but avoid obstacles!
 
