@@ -695,6 +695,58 @@
         "name": "arrow2.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Gold star.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Gold star.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/Space Shooter/PNG/Power-ups/Gold star.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Shield Red Powerup .png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Shield Red Powerup .png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/Space Shooter/PNG/Power-ups/Shield Red Powerup .png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Silver bolt.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Silver bolt.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/Space Shooter/PNG/Power-ups/Silver bolt.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Bolt Red Powerup.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Bolt Red Powerup.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/Space Shooter/PNG/Power-ups/Bolt Red Powerup.png",
+          "name": "gdevelop-asset-store"
+        }
       }
     ],
     "resourceFolders": []
@@ -875,22 +927,6 @@
           "height": 0,
           "layer": "",
           "locked": false,
-          "name": "SceneInstructions",
-          "persistentUuid": "adb60ec6-c391-4133-832d-0e58e3557710",
-          "width": 0,
-          "x": 275,
-          "y": 530,
-          "zOrder": 8,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
           "name": "ExitText",
           "persistentUuid": "347216d5-5f9a-455d-8b34-8a456ad6ec45",
           "width": 0,
@@ -1039,25 +1075,6 @@
           ]
         },
         {
-          "bold": false,
-          "italic": false,
-          "name": "SceneInstructions",
-          "smoothed": true,
-          "tags": "",
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "behaviors": [],
-          "string": "Use your mouse to make your selection\n    or arrow keys and enter to choose",
-          "font": "",
-          "characterSize": 15,
-          "color": {
-            "b": 196,
-            "g": 196,
-            "r": 196
-          }
-        },
-        {
           "name": "SnowyTree",
           "tags": "",
           "type": "Sprite",
@@ -1193,12 +1210,10 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "ModVarScene"
+                    "value": "Cache"
                   },
                   "parameters": [
-                    "exitSelected",
-                    "=",
-                    "0"
+                    "SignArrowPlay"
                   ],
                   "subInstructions": []
                 }
@@ -1256,34 +1271,6 @@
                         {
                           "type": {
                             "inverted": false,
-                            "value": "KeyPressed"
-                          },
-                          "parameters": [
-                            "",
-                            "Down"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "BuiltinCommonInstructions::Once"
-                          },
-                          "parameters": [],
-                          "subInstructions": []
-                        }
-                      ]
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "BuiltinCommonInstructions::And"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "inverted": false,
                             "value": "SourisSurObjet"
                           },
                           "parameters": [
@@ -1320,18 +1307,6 @@
                     ""
                   ],
                   "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarScene"
-                  },
-                  "parameters": [
-                    "exitSelected",
-                    "=",
-                    "1"
-                  ],
-                  "subInstructions": []
                 }
               ],
               "events": []
@@ -1348,34 +1323,6 @@
                   },
                   "parameters": [],
                   "subInstructions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "BuiltinCommonInstructions::And"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "KeyPressed"
-                          },
-                          "parameters": [
-                            "",
-                            "Up"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "BuiltinCommonInstructions::Once"
-                          },
-                          "parameters": [],
-                          "subInstructions": []
-                        }
-                      ]
-                    },
                     {
                       "type": {
                         "inverted": false,
@@ -1422,18 +1369,6 @@
                     "SignArrowExit"
                   ],
                   "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarScene"
-                  },
-                  "parameters": [
-                    "exitSelected",
-                    "=",
-                    "0"
-                  ],
-                  "subInstructions": []
                 }
               ],
               "events": []
@@ -1465,38 +1400,6 @@
                   },
                   "parameters": [],
                   "subInstructions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "BuiltinCommonInstructions::And"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "VarScene"
-                          },
-                          "parameters": [
-                            "exitSelected",
-                            "=",
-                            "0"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "KeyPressed"
-                          },
-                          "parameters": [
-                            "",
-                            "Return"
-                          ],
-                          "subInstructions": []
-                        }
-                      ]
-                    },
                     {
                       "type": {
                         "inverted": false,
@@ -1576,38 +1479,6 @@
                   },
                   "parameters": [],
                   "subInstructions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "BuiltinCommonInstructions::And"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "VarScene"
-                          },
-                          "parameters": [
-                            "exitSelected",
-                            "=",
-                            "1"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "KeyPressed"
-                          },
-                          "parameters": [
-                            "",
-                            "Return"
-                          ],
-                          "subInstructions": []
-                        }
-                      ]
-                    },
                     {
                       "type": {
                         "inverted": false,
@@ -1742,8 +1613,8 @@
           "name": "SnowballStatic",
           "persistentUuid": "9d513324-1586-45ea-b204-b54ea6b10af3",
           "width": 131,
-          "x": 623,
-          "y": 172,
+          "x": 582,
+          "y": 138,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -1758,8 +1629,8 @@
           "name": "ReadyText",
           "persistentUuid": "0c20867b-ce07-4858-9d46-62848bf1b5ed",
           "width": 0,
-          "x": 160,
-          "y": 463,
+          "x": 165,
+          "y": 410,
           "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
@@ -1790,8 +1661,8 @@
           "name": "InstructionsText",
           "persistentUuid": "a4ab54db-9210-4f3d-bc0a-d14f6fd433c8",
           "width": 0,
-          "x": 45,
-          "y": 200,
+          "x": 28,
+          "y": 154,
           "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
@@ -1806,8 +1677,8 @@
           "name": "ThisIsYouText",
           "persistentUuid": "25711079-1fc6-4e8c-a787-6fbc7a70bc87",
           "width": 0,
-          "x": 483,
-          "y": 181,
+          "x": 418,
+          "y": 179,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -1822,8 +1693,8 @@
           "name": "Arrow",
           "persistentUuid": "26c38354-7004-4614-9e6d-876cff88e11a",
           "width": 74,
-          "x": 552,
-          "y": 205,
+          "x": 536,
+          "y": 175,
           "zOrder": 7,
           "numberProperties": [],
           "stringProperties": [],
@@ -1832,14 +1703,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 86,
+          "height": 67,
           "layer": "",
           "locked": false,
           "name": "Stone",
           "persistentUuid": "5c989ad4-6cc2-4054-8aa7-2b15993143ef",
-          "width": 118,
-          "x": 475,
-          "y": 442,
+          "width": 91,
+          "x": 453,
+          "y": 282,
           "zOrder": 8,
           "numberProperties": [],
           "stringProperties": [],
@@ -1854,15 +1725,15 @@
           "name": "AvoidText",
           "persistentUuid": "0dafd3a2-0bf1-4b5b-92a8-c90df70ddac4",
           "width": 0,
-          "x": 562,
-          "y": 325,
+          "x": 571,
+          "y": 245,
           "zOrder": 9,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
         },
         {
-          "angle": 78.3432,
+          "angle": 118.497,
           "customSize": true,
           "height": 57,
           "layer": "",
@@ -1870,8 +1741,8 @@
           "name": "ArrowOpposite",
           "persistentUuid": "1570e262-02f8-42f2-a64b-eeffe0acf9b7",
           "width": 74,
-          "x": 611,
-          "y": 402,
+          "x": 561,
+          "y": 292,
           "zOrder": 10,
           "numberProperties": [],
           "stringProperties": [],
@@ -1889,6 +1760,86 @@
           "x": 105,
           "y": 465,
           "zOrder": 11,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "SilverBolt",
+          "persistentUuid": "71404f5c-6d21-46be-b8c4-48f0467b925c",
+          "width": 0,
+          "x": 700,
+          "y": 480,
+          "zOrder": 12,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "GoldStar",
+          "persistentUuid": "a9953798-e57b-47c8-a96a-9942a58d7717",
+          "width": 0,
+          "x": 500,
+          "y": 480,
+          "zOrder": 14,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "PowerUp",
+          "persistentUuid": "d98edf7f-c216-45f5-a7ef-2e35df59f5e8",
+          "width": 0,
+          "x": 482,
+          "y": 518,
+          "zOrder": 15,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "ShieldRedPowerup",
+          "persistentUuid": "a3adb92d-e947-4180-8ec2-1542d5ed0104",
+          "width": 0,
+          "x": 600,
+          "y": 480,
+          "zOrder": 16,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "powerupsExplanation",
+          "persistentUuid": "2e118a37-73f3-4787-92f2-7efd84508751",
+          "width": 0,
+          "x": 508,
+          "y": 414,
+          "zOrder": 17,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1982,7 +1933,7 @@
           "underlined": false,
           "variables": [],
           "behaviors": [],
-          "string": "             Use your ARROW KEYS \n        to move your snowball around\n\n      Be careful to avoid the obstacles\n             They'll make you small!\n\n         Aim to get as large as possible\nwithout hitting anything on the way down",
+          "string": "             Use your ARROW KEYS \n        to move your snowball around.\n\n      Be careful to avoid the obstacles.\n             They'll make you small!\n\n         Aim to get as large as possible\nwithout hitting anything on the way down.",
           "font": "",
           "characterSize": 20,
           "color": {
@@ -2184,6 +2135,161 @@
               ]
             }
           ]
+        },
+        {
+          "name": "GoldStar",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.025,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Gold star.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "SilverBolt",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.025,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Silver bolt.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "PowerUp",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "Invincibility      Slow Down     Speed Up",
+          "font": "",
+          "characterSize": 15,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
+        },
+        {
+          "name": "ShieldRedPowerup",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.025,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Shield Red Powerup .png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "powerupsExplanation",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "   Collect these to gain\npowers for a brief period!",
+          "font": "",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
         }
       ],
       "events": [
@@ -2553,7 +2659,7 @@
         "gridWidth": 32,
         "snap": false,
         "windowMask": false,
-        "zoomFactor": 0.7584
+        "zoomFactor": 0.9102
       },
       "objectsGroups": [],
       "variables": [
@@ -2630,7 +2736,7 @@
           "width": 0,
           "x": 14,
           "y": 15,
-          "zOrder": 5,
+          "zOrder": 100,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2892,7 +2998,7 @@
           "initialVariables": []
         },
         {
-          "angle": -75,
+          "angle": 270,
           "customSize": true,
           "height": 12,
           "layer": "",
@@ -2902,7 +3008,7 @@
           "width": 16,
           "x": 375,
           "y": 22,
-          "zOrder": 2,
+          "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2918,7 +3024,55 @@
           "width": 0,
           "x": 14,
           "y": 45,
-          "zOrder": 16,
+          "zOrder": 100,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "ShieldRedPowerup",
+          "persistentUuid": "be08c12e-7b02-47ba-a619-e43792002f16",
+          "width": 0,
+          "x": 395,
+          "y": 684,
+          "zOrder": 17,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "SilverBolt",
+          "persistentUuid": "a509e223-1133-45c6-8485-fa3babef8e60",
+          "width": 0,
+          "x": 450,
+          "y": 688,
+          "zOrder": 18,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "GoldStar",
+          "persistentUuid": "5ce00c13-6543-4559-b4f5-fa69c4600965",
+          "width": 0,
+          "x": 352,
+          "y": 688,
+          "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3306,11 +3460,11 @@
               "directions": [
                 {
                   "looping": true,
-                  "timeBetweenFrames": 0.1,
+                  "timeBetweenFrames": 0.05,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "snowball_013.png",
+                      "image": "snowball_01.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -3318,87 +3472,107 @@
                         "y": 0
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 140.897,
+                        "y": 207.793
                       },
                       "customCollisionMask": [
                         [
                           {
-                            "x": 233.809,
-                            "y": 266.837
+                            "x": 242.071,
+                            "y": 185.994
                           },
                           {
-                            "x": 203.87,
-                            "y": 297.475
+                            "x": 245.286,
+                            "y": 219.861
                           },
                           {
-                            "x": 175.826,
-                            "y": 307.709
+                            "x": 227.672,
+                            "y": 272.066
                           },
                           {
-                            "x": 144.965,
-                            "y": 320.704
+                            "x": 208.403,
+                            "y": 296.059
                           },
                           {
-                            "x": 96.6122,
-                            "y": 316.24
+                            "x": 179.37,
+                            "y": 306.978
                           },
                           {
-                            "x": 51.7,
-                            "y": 290.792
+                            "x": 144.263,
+                            "y": 318.25
                           },
                           {
-                            "x": 22.4528,
-                            "y": 251.373
+                            "x": 109.033,
+                            "y": 318.782
                           },
                           {
-                            "x": 17.5679,
-                            "y": 188.437
+                            "x": 67.5487,
+                            "y": 302.654
                           },
                           {
-                            "x": 35.2289,
-                            "y": 156.583
+                            "x": 34.6584,
+                            "y": 268.806
                           },
                           {
-                            "x": 50.4656,
-                            "y": 124.45
+                            "x": 18.6049,
+                            "y": 233.808
                           },
                           {
-                            "x": 76.5638,
-                            "y": 102.009
+                            "x": 18.0411,
+                            "y": 191.659
                           },
                           {
-                            "x": 107.812,
-                            "y": 93.7916
+                            "x": 26.8694,
+                            "y": 170.442
                           },
                           {
-                            "x": 148.397,
-                            "y": 87.2443
+                            "x": 38.1908,
+                            "y": 157.735
                           },
                           {
-                            "x": 191.562,
-                            "y": 98.5319
+                            "x": 46.5665,
+                            "y": 131.383
                           },
                           {
-                            "x": 223.831,
-                            "y": 129.834
+                            "x": 61.7119,
+                            "y": 112.452
                           },
                           {
-                            "x": 234.996,
-                            "y": 167.298
+                            "x": 86.4288,
+                            "y": 98.9474
                           },
                           {
-                            "x": 247.071,
-                            "y": 202.076
+                            "x": 108.092,
+                            "y": 96.9701
+                          },
+                          {
+                            "x": 133.468,
+                            "y": 88.1462
+                          },
+                          {
+                            "x": 172.842,
+                            "y": 90.6894
+                          },
+                          {
+                            "x": 212.572,
+                            "y": 113.565
+                          },
+                          {
+                            "x": 229.216,
+                            "y": 142.065
+                          },
+                          {
+                            "x": 234.244,
+                            "y": 170.147
                           }
                         ]
                       ]
                     },
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "snowball_022.png",
+                      "image": "snowball_02.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -3406,87 +3580,107 @@
                         "y": 0
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 140.897,
+                        "y": 207.793
                       },
                       "customCollisionMask": [
                         [
                           {
-                            "x": 233.809,
-                            "y": 266.837
+                            "x": 242.071,
+                            "y": 185.994
                           },
                           {
-                            "x": 203.87,
-                            "y": 297.475
+                            "x": 245.286,
+                            "y": 219.861
                           },
                           {
-                            "x": 175.826,
-                            "y": 307.709
+                            "x": 227.672,
+                            "y": 272.066
                           },
                           {
-                            "x": 144.965,
-                            "y": 320.704
+                            "x": 208.403,
+                            "y": 296.059
                           },
                           {
-                            "x": 96.6122,
-                            "y": 316.24
+                            "x": 179.37,
+                            "y": 306.978
                           },
                           {
-                            "x": 51.7,
-                            "y": 290.792
+                            "x": 144.263,
+                            "y": 318.25
                           },
                           {
-                            "x": 22.4528,
-                            "y": 251.373
+                            "x": 109.033,
+                            "y": 318.782
                           },
                           {
-                            "x": 17.5679,
-                            "y": 188.437
+                            "x": 67.5487,
+                            "y": 302.654
                           },
                           {
-                            "x": 35.2289,
-                            "y": 156.583
+                            "x": 34.6584,
+                            "y": 268.806
                           },
                           {
-                            "x": 50.4656,
-                            "y": 124.45
+                            "x": 18.6049,
+                            "y": 233.808
                           },
                           {
-                            "x": 76.5638,
-                            "y": 102.009
+                            "x": 18.0411,
+                            "y": 191.659
                           },
                           {
-                            "x": 107.812,
-                            "y": 93.7916
+                            "x": 26.8694,
+                            "y": 170.442
                           },
                           {
-                            "x": 148.397,
-                            "y": 87.2443
+                            "x": 38.1908,
+                            "y": 157.735
                           },
                           {
-                            "x": 191.562,
-                            "y": 98.5319
+                            "x": 46.5665,
+                            "y": 131.383
                           },
                           {
-                            "x": 223.831,
-                            "y": 129.834
+                            "x": 61.7119,
+                            "y": 112.452
                           },
                           {
-                            "x": 234.996,
-                            "y": 167.298
+                            "x": 86.4288,
+                            "y": 98.9474
                           },
                           {
-                            "x": 247.071,
-                            "y": 202.076
+                            "x": 108.092,
+                            "y": 96.9701
+                          },
+                          {
+                            "x": 133.468,
+                            "y": 88.1462
+                          },
+                          {
+                            "x": 172.842,
+                            "y": 90.6894
+                          },
+                          {
+                            "x": 212.572,
+                            "y": 113.565
+                          },
+                          {
+                            "x": 229.216,
+                            "y": 142.065
+                          },
+                          {
+                            "x": 234.244,
+                            "y": 170.147
                           }
                         ]
                       ]
                     },
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "snowball_032.png",
+                      "image": "snowball_03.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -3494,87 +3688,107 @@
                         "y": 0
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 140.897,
+                        "y": 207.793
                       },
                       "customCollisionMask": [
                         [
                           {
-                            "x": 233.809,
-                            "y": 266.837
+                            "x": 242.071,
+                            "y": 185.994
                           },
                           {
-                            "x": 203.87,
-                            "y": 297.475
+                            "x": 245.286,
+                            "y": 219.861
                           },
                           {
-                            "x": 175.826,
-                            "y": 307.709
+                            "x": 227.672,
+                            "y": 272.066
                           },
                           {
-                            "x": 144.965,
-                            "y": 320.704
+                            "x": 208.403,
+                            "y": 296.059
                           },
                           {
-                            "x": 96.6122,
-                            "y": 316.24
+                            "x": 179.37,
+                            "y": 306.978
                           },
                           {
-                            "x": 51.7,
-                            "y": 290.792
+                            "x": 144.263,
+                            "y": 318.25
                           },
                           {
-                            "x": 22.4528,
-                            "y": 251.373
+                            "x": 109.033,
+                            "y": 318.782
                           },
                           {
-                            "x": 17.5679,
-                            "y": 188.437
+                            "x": 67.5487,
+                            "y": 302.654
                           },
                           {
-                            "x": 35.2289,
-                            "y": 156.583
+                            "x": 34.6584,
+                            "y": 268.806
                           },
                           {
-                            "x": 50.4656,
-                            "y": 124.45
+                            "x": 18.6049,
+                            "y": 233.808
                           },
                           {
-                            "x": 76.5638,
-                            "y": 102.009
+                            "x": 18.0411,
+                            "y": 191.659
                           },
                           {
-                            "x": 107.812,
-                            "y": 93.7916
+                            "x": 26.8694,
+                            "y": 170.442
                           },
                           {
-                            "x": 148.397,
-                            "y": 87.2443
+                            "x": 38.1908,
+                            "y": 157.735
                           },
                           {
-                            "x": 191.562,
-                            "y": 98.5319
+                            "x": 46.5665,
+                            "y": 131.383
                           },
                           {
-                            "x": 223.831,
-                            "y": 129.834
+                            "x": 61.7119,
+                            "y": 112.452
                           },
                           {
-                            "x": 234.996,
-                            "y": 167.298
+                            "x": 86.4288,
+                            "y": 98.9474
                           },
                           {
-                            "x": 247.071,
-                            "y": 202.076
+                            "x": 108.092,
+                            "y": 96.9701
+                          },
+                          {
+                            "x": 133.468,
+                            "y": 88.1462
+                          },
+                          {
+                            "x": 172.842,
+                            "y": 90.6894
+                          },
+                          {
+                            "x": 212.572,
+                            "y": 113.565
+                          },
+                          {
+                            "x": 229.216,
+                            "y": 142.065
+                          },
+                          {
+                            "x": 234.244,
+                            "y": 170.147
                           }
                         ]
                       ]
                     },
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "snowball_042.png",
+                      "image": "snowball_04.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -3582,87 +3796,107 @@
                         "y": 0
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 140.897,
+                        "y": 207.793
                       },
                       "customCollisionMask": [
                         [
                           {
-                            "x": 233.809,
-                            "y": 266.837
+                            "x": 242.071,
+                            "y": 185.994
                           },
                           {
-                            "x": 203.87,
-                            "y": 297.475
+                            "x": 245.286,
+                            "y": 219.861
                           },
                           {
-                            "x": 175.826,
-                            "y": 307.709
+                            "x": 227.672,
+                            "y": 272.066
                           },
                           {
-                            "x": 144.965,
-                            "y": 320.704
+                            "x": 208.403,
+                            "y": 296.059
                           },
                           {
-                            "x": 96.6122,
-                            "y": 316.24
+                            "x": 179.37,
+                            "y": 306.978
                           },
                           {
-                            "x": 51.7,
-                            "y": 290.792
+                            "x": 144.263,
+                            "y": 318.25
                           },
                           {
-                            "x": 22.4528,
-                            "y": 251.373
+                            "x": 109.033,
+                            "y": 318.782
                           },
                           {
-                            "x": 17.5679,
-                            "y": 188.437
+                            "x": 67.5487,
+                            "y": 302.654
                           },
                           {
-                            "x": 35.2289,
-                            "y": 156.583
+                            "x": 34.6584,
+                            "y": 268.806
                           },
                           {
-                            "x": 50.4656,
-                            "y": 124.45
+                            "x": 18.6049,
+                            "y": 233.808
                           },
                           {
-                            "x": 76.5638,
-                            "y": 102.009
+                            "x": 18.0411,
+                            "y": 191.659
                           },
                           {
-                            "x": 107.812,
-                            "y": 93.7916
+                            "x": 26.8694,
+                            "y": 170.442
                           },
                           {
-                            "x": 148.397,
-                            "y": 87.2443
+                            "x": 38.1908,
+                            "y": 157.735
                           },
                           {
-                            "x": 191.562,
-                            "y": 98.5319
+                            "x": 46.5665,
+                            "y": 131.383
                           },
                           {
-                            "x": 223.831,
-                            "y": 129.834
+                            "x": 61.7119,
+                            "y": 112.452
                           },
                           {
-                            "x": 234.996,
-                            "y": 167.298
+                            "x": 86.4288,
+                            "y": 98.9474
                           },
                           {
-                            "x": 247.071,
-                            "y": 202.076
+                            "x": 108.092,
+                            "y": 96.9701
+                          },
+                          {
+                            "x": 133.468,
+                            "y": 88.1462
+                          },
+                          {
+                            "x": 172.842,
+                            "y": 90.6894
+                          },
+                          {
+                            "x": 212.572,
+                            "y": 113.565
+                          },
+                          {
+                            "x": 229.216,
+                            "y": 142.065
+                          },
+                          {
+                            "x": 234.244,
+                            "y": 170.147
                           }
                         ]
                       ]
                     },
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "snowball_052.png",
+                      "image": "snowball_05.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -3670,87 +3904,237 @@
                         "y": 0
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 140.897,
+                        "y": 207.793
                       },
                       "customCollisionMask": [
                         [
                           {
-                            "x": 233.809,
-                            "y": 266.837
+                            "x": 242.071,
+                            "y": 185.994
                           },
                           {
-                            "x": 203.87,
-                            "y": 297.475
+                            "x": 245.286,
+                            "y": 219.861
                           },
                           {
-                            "x": 175.826,
-                            "y": 307.709
+                            "x": 227.672,
+                            "y": 272.066
                           },
                           {
-                            "x": 144.965,
-                            "y": 320.704
+                            "x": 208.403,
+                            "y": 296.059
                           },
                           {
-                            "x": 96.6122,
-                            "y": 316.24
+                            "x": 179.37,
+                            "y": 306.978
                           },
                           {
-                            "x": 51.7,
-                            "y": 290.792
+                            "x": 144.263,
+                            "y": 318.25
                           },
                           {
-                            "x": 22.4528,
-                            "y": 251.373
+                            "x": 109.033,
+                            "y": 318.782
                           },
                           {
-                            "x": 17.5679,
-                            "y": 188.437
+                            "x": 67.5487,
+                            "y": 302.654
                           },
                           {
-                            "x": 35.2289,
-                            "y": 156.583
+                            "x": 34.6584,
+                            "y": 268.806
                           },
                           {
-                            "x": 50.4656,
-                            "y": 124.45
+                            "x": 18.6049,
+                            "y": 233.808
                           },
                           {
-                            "x": 76.5638,
-                            "y": 102.009
+                            "x": 18.0411,
+                            "y": 191.659
                           },
                           {
-                            "x": 107.812,
-                            "y": 93.7916
+                            "x": 26.8694,
+                            "y": 170.442
                           },
                           {
-                            "x": 148.397,
-                            "y": 87.2443
+                            "x": 38.1908,
+                            "y": 157.735
                           },
                           {
-                            "x": 191.562,
-                            "y": 98.5319
+                            "x": 46.5665,
+                            "y": 131.383
                           },
                           {
-                            "x": 223.831,
-                            "y": 129.834
+                            "x": 61.7119,
+                            "y": 112.452
                           },
                           {
-                            "x": 234.996,
-                            "y": 167.298
+                            "x": 86.4288,
+                            "y": 98.9474
                           },
                           {
-                            "x": 247.071,
-                            "y": 202.076
+                            "x": 108.092,
+                            "y": 96.9701
+                          },
+                          {
+                            "x": 133.468,
+                            "y": 88.1462
+                          },
+                          {
+                            "x": 172.842,
+                            "y": 90.6894
+                          },
+                          {
+                            "x": 212.572,
+                            "y": 113.565
+                          },
+                          {
+                            "x": 229.216,
+                            "y": 142.065
+                          },
+                          {
+                            "x": 234.244,
+                            "y": 170.147
                           }
                         ]
                       ]
                     },
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "snowball_062.png",
+                      "image": "snowball_06.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 140.897,
+                        "y": 207.793
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 242.071,
+                            "y": 185.994
+                          },
+                          {
+                            "x": 245.286,
+                            "y": 219.861
+                          },
+                          {
+                            "x": 227.672,
+                            "y": 272.066
+                          },
+                          {
+                            "x": 208.403,
+                            "y": 296.059
+                          },
+                          {
+                            "x": 179.37,
+                            "y": 306.978
+                          },
+                          {
+                            "x": 144.263,
+                            "y": 318.25
+                          },
+                          {
+                            "x": 109.033,
+                            "y": 318.782
+                          },
+                          {
+                            "x": 67.5487,
+                            "y": 302.654
+                          },
+                          {
+                            "x": 34.6584,
+                            "y": 268.806
+                          },
+                          {
+                            "x": 18.6049,
+                            "y": 233.808
+                          },
+                          {
+                            "x": 18.0411,
+                            "y": 191.659
+                          },
+                          {
+                            "x": 26.8694,
+                            "y": 170.442
+                          },
+                          {
+                            "x": 38.1908,
+                            "y": 157.735
+                          },
+                          {
+                            "x": 46.5665,
+                            "y": 131.383
+                          },
+                          {
+                            "x": 61.7119,
+                            "y": 112.452
+                          },
+                          {
+                            "x": 86.4288,
+                            "y": 98.9474
+                          },
+                          {
+                            "x": 108.092,
+                            "y": 96.9701
+                          },
+                          {
+                            "x": 133.468,
+                            "y": 88.1462
+                          },
+                          {
+                            "x": 172.842,
+                            "y": 90.6894
+                          },
+                          {
+                            "x": 212.572,
+                            "y": 113.565
+                          },
+                          {
+                            "x": 229.216,
+                            "y": 142.065
+                          },
+                          {
+                            "x": 234.244,
+                            "y": 170.147
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "GoldStar",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.025,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Gold star.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -3766,72 +4150,153 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 233.809,
-                            "y": 266.837
+                            "x": 0.728572,
+                            "y": 11.1925
                           },
                           {
-                            "x": 203.87,
-                            "y": 297.475
+                            "x": 10.3411,
+                            "y": 8.13118
                           },
                           {
-                            "x": 175.826,
-                            "y": 307.709
+                            "x": 16.0216,
+                            "y": 0.970175
                           },
                           {
-                            "x": 144.965,
-                            "y": 320.704
+                            "x": 21.602,
+                            "y": 8.30431
                           },
                           {
-                            "x": 96.6122,
-                            "y": 316.24
+                            "x": 30.4969,
+                            "y": 12.6431
                           },
                           {
-                            "x": 51.7,
-                            "y": 290.792
+                            "x": 25.451,
+                            "y": 19.2048
                           },
                           {
-                            "x": 22.4528,
-                            "y": 251.373
+                            "x": 25.0453,
+                            "y": 29.435
                           },
                           {
-                            "x": 17.5679,
-                            "y": 188.437
+                            "x": 16.1254,
+                            "y": 26.5119
                           },
                           {
-                            "x": 35.2289,
-                            "y": 156.583
+                            "x": 6.27588,
+                            "y": 29.7276
                           },
                           {
-                            "x": 50.4656,
-                            "y": 124.45
+                            "x": 5.5139,
+                            "y": 19.9103
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ShieldRedPowerup",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.025,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Shield Red Powerup .png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "SilverBolt",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.025,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Silver bolt.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 3.39848,
+                            "y": 1.9051
                           },
                           {
-                            "x": 76.5638,
-                            "y": 102.009
+                            "x": 18.233,
+                            "y": 1.89314
                           },
                           {
-                            "x": 107.812,
-                            "y": 93.7916
+                            "x": 14.2382,
+                            "y": 11.0705
                           },
                           {
-                            "x": 148.397,
-                            "y": 87.2443
+                            "x": 18.59,
+                            "y": 15.5716
                           },
                           {
-                            "x": 191.562,
-                            "y": 98.5319
+                            "x": 5.85032,
+                            "y": 29.5603
                           },
                           {
-                            "x": 223.831,
-                            "y": 129.834
+                            "x": 6.62124,
+                            "y": 19.6329
                           },
                           {
-                            "x": 234.996,
-                            "y": 167.298
-                          },
-                          {
-                            "x": 247.071,
-                            "y": 202.076
+                            "x": 1.15412,
+                            "y": 17.4578
                           }
                         ]
                       ]
@@ -4058,7 +4523,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Hiding game over text",
+              "comment": "Hiding text and powerups",
               "comment2": ""
             },
             {
@@ -4084,16 +4549,6 @@
                     "value": "Cache"
                   },
                   "parameters": [
-                    "GameOverText"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Cache"
-                  },
-                  "parameters": [
                     "FinalScoreText"
                   ],
                   "subInstructions": []
@@ -4105,6 +4560,104 @@
                   },
                   "parameters": [
                     "EnabledText"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "GoldStar"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "ShieldRedPowerup"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "SilverBolt"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Powerup timer start",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "DepartScene"
+                  },
+                  "parameters": [
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"invincibilityTimer\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"speedTimer\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"slowTimer\""
                   ],
                   "subInstructions": []
                 }
@@ -4120,7 +4673,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "Game States",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -4477,24 +5030,24 @@
                         {
                           "type": {
                             "inverted": false,
-                            "value": "MettreY"
-                          },
-                          "parameters": [
-                            "Bush",
-                            "=",
-                            "RandomInRange(700,1500)"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
                             "value": "MettreX"
                           },
                           "parameters": [
                             "Bush",
                             "=",
                             "RandomInRange(10,640)"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "MettreY"
+                          },
+                          "parameters": [
+                            "Bush",
+                            "=",
+                            "RandomInRange(700,1500)"
                           ],
                           "subInstructions": []
                         }
@@ -4523,24 +5076,24 @@
                         {
                           "type": {
                             "inverted": false,
-                            "value": "MettreY"
-                          },
-                          "parameters": [
-                            "LargeRock",
-                            "=",
-                            "RandomInRange(600,1600)"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
                             "value": "MettreX"
                           },
                           "parameters": [
                             "LargeRock",
                             "=",
                             "RandomInRange(10,640)"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "MettreY"
+                          },
+                          "parameters": [
+                            "LargeRock",
+                            "=",
+                            "RandomInRange(600,1600)"
                           ],
                           "subInstructions": []
                         }
@@ -4556,7 +5109,7 @@
                   "colorR": 74,
                   "creationTime": 0,
                   "disabled": false,
-                  "folded": false,
+                  "folded": true,
                   "name": "Snowball Mechanics",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -4799,6 +5352,402 @@
                         }
                       ],
                       "events": []
+                    }
+                  ],
+                  "parameters": []
+                },
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "disabled": false,
+                  "folded": false,
+                  "name": "Powerups",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "colorB": 228,
+                      "colorG": 176,
+                      "colorR": 74,
+                      "creationTime": 0,
+                      "disabled": false,
+                      "folded": false,
+                      "name": "Invincibility",
+                      "source": "",
+                      "type": "BuiltinCommonInstructions::Group",
+                      "events": [
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Powerup appears every 15 seconds",
+                          "comment2": ""
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "Timer"
+                              },
+                              "parameters": [
+                                "",
+                                "3",
+                                "\"invincibilityTimer\""
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "MoveObjects"
+                              },
+                              "parameters": [
+                                ""
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "Montre"
+                              },
+                              "parameters": [
+                                "GoldStar",
+                                ""
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "AddForceAL"
+                              },
+                              "parameters": [
+                                "GoldStar",
+                                "Variable(obstacleDirection)",
+                                "Variable(obstacleSpeed)",
+                                ""
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "events": []
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "If the sprite is out of the playable area, reset timer",
+                          "comment2": ""
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "BuiltinCommonInstructions::Or"
+                              },
+                              "parameters": [],
+                              "subInstructions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "PosY"
+                                  },
+                                  "parameters": [
+                                    "GoldStar",
+                                    "<",
+                                    "-30"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "MettreXY"
+                              },
+                              "parameters": [
+                                "GoldStar",
+                                "=",
+                                "RandomInRange(10,640)",
+                                "=",
+                                "700"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ResetTimer"
+                              },
+                              "parameters": [
+                                "",
+                                "\"invincibilityTimer\""
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "events": []
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "BuiltinCommonInstructions::Or"
+                              },
+                              "parameters": [],
+                              "subInstructions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "CollisionNP"
+                                  },
+                                  "parameters": [
+                                    "Snowball",
+                                    "GoldStar",
+                                    "",
+                                    "",
+                                    ""
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "invincibility",
+                                "=",
+                                "1"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "Cache"
+                              },
+                              "parameters": [
+                                "GoldStar"
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "events": [
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [],
+                              "events": []
+                            }
+                          ]
+                        }
+                      ],
+                      "parameters": []
+                    },
+                    {
+                      "colorB": 228,
+                      "colorG": 176,
+                      "colorR": 74,
+                      "creationTime": 0,
+                      "disabled": false,
+                      "folded": true,
+                      "name": "Slow",
+                      "source": "",
+                      "type": "BuiltinCommonInstructions::Group",
+                      "events": [
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "Timer"
+                              },
+                              "parameters": [
+                                "",
+                                "30",
+                                "\"slowTimer\""
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "MoveObjects"
+                              },
+                              "parameters": [
+                                ""
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "Montre"
+                              },
+                              "parameters": [
+                                "ShieldRedPowerup",
+                                ""
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "AddForceAL"
+                              },
+                              "parameters": [
+                                "ShieldRedPowerup",
+                                "Variable(obstacleDirection)",
+                                "Variable(obstacleSpeed)",
+                                ""
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ResetTimer"
+                              },
+                              "parameters": [
+                                "",
+                                "\"slowTimer\""
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "events": []
+                        }
+                      ],
+                      "parameters": []
+                    },
+                    {
+                      "colorB": 228,
+                      "colorG": 176,
+                      "colorR": 74,
+                      "creationTime": 0,
+                      "disabled": false,
+                      "folded": true,
+                      "name": "Speed",
+                      "source": "",
+                      "type": "BuiltinCommonInstructions::Group",
+                      "events": [
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "Timer"
+                              },
+                              "parameters": [
+                                "",
+                                "30",
+                                "\"speedTimer\""
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "MoveObjects"
+                              },
+                              "parameters": [
+                                ""
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "Montre"
+                              },
+                              "parameters": [
+                                "SilverBolt",
+                                ""
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "AddForceAL"
+                              },
+                              "parameters": [
+                                "SilverBolt",
+                                "Variable(obstacleDirection)",
+                                "Variable(obstacleSpeed)",
+                                ""
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ResetTimer"
+                              },
+                              "parameters": [
+                                "",
+                                "\"speedTimer\""
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "events": []
+                        }
+                      ],
+                      "parameters": []
                     }
                   ],
                   "parameters": []
