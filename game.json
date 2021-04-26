@@ -269,15 +269,6 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "Barrier-1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Barrier-1.png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
         "file": "CheckPattern-1.png",
         "kind": "image",
         "metadata": "",
@@ -801,6 +792,123 @@
         "name": "snowball_06_r.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "file": "8bit Bossa.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "8bit Bossa.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "userAdded": true
+      },
+      {
+        "file": "Space Sprinkles.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Space Sprinkles.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "userAdded": true
+      },
+      {
+        "file": "Corsica_S-Snow_Shoes-18.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Corsica_S-Snow_Shoes-18.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Barrier-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Barrier-1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "NewFile-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "NewFile-1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "NewFile-1-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "NewFile-1-0.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "ic_music_note.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ic_music_note.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "ic_music_note2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ic_music_note2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "ic_music_off.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ic_music_off.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "ic_music_note3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ic_music_note3.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "ic_music_note4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ic_music_note4.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "ic_music_off2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ic_music_off2.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "ic_music_off3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ic_music_off3.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -828,6 +936,16 @@
       "name": "seconds",
       "type": "string",
       "value": ""
+    },
+    {
+      "name": "muted",
+      "type": "string",
+      "value": ""
+    },
+    {
+      "name": "mutedFlag",
+      "type": "string",
+      "value": ""
     }
   ],
   "layouts": [
@@ -841,7 +959,7 @@
       "oglZNear": 1,
       "r": 209,
       "standardSortMethod": true,
-      "stopSoundsOnStartup": true,
+      "stopSoundsOnStartup": false,
       "title": "",
       "v": 209,
       "uiSettings": {
@@ -991,6 +1109,22 @@
           "x": 395,
           "y": 355,
           "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "Sound",
+          "persistentUuid": "382f6f65-1bfa-4810-927b-ef6fd61ad575",
+          "width": 0,
+          "x": 15,
+          "y": 11,
+          "zOrder": 11,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1172,7 +1306,7 @@
           ]
         },
         {
-          "name": "SettingsButton",
+          "name": "Sound",
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
@@ -1180,7 +1314,7 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "",
+              "name": "On",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -1189,7 +1323,36 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "settings_cog.png",
+                      "image": "ic_music_note4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Off",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ic_music_off3.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -1212,6 +1375,41 @@
         }
       ],
       "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "PlaySoundCanal"
+              },
+              "parameters": [
+                "",
+                "8bit Bossa.mp3",
+                "0",
+                "10",
+                "50",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
         {
           "colorB": 228,
           "colorG": 176,
@@ -1272,6 +1470,53 @@
                   },
                   "parameters": [
                     "SignArrowPlay"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Scene Variables:\n\nmuted: 1 = mute music 0 = unmute\nmutedFlag: checks to see if state has changed",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "DepartScene"
+                  },
+                  "parameters": [
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "muted",
+                    "=",
+                    "0"
                   ],
                   "subInstructions": []
                 }
@@ -1586,6 +1831,337 @@
                 }
               ],
               "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Opens the settings page",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::And"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SourisSurObjet"
+                      },
+                      "parameters": [
+                        "Sound",
+                        "Left",
+                        "",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "MouseButtonReleased"
+                      },
+                      "parameters": [
+                        "",
+                        "Left"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarGlobal"
+                      },
+                      "parameters": [
+                        "muted",
+                        "=",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeAnimation"
+                  },
+                  "parameters": [
+                    "Sound",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarGlobal"
+                  },
+                  "parameters": [
+                    "muted",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "RePlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::And"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SourisSurObjet"
+                      },
+                      "parameters": [
+                        "Sound",
+                        "Left",
+                        "",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "MouseButtonReleased"
+                      },
+                      "parameters": [
+                        "",
+                        "Left"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": [],
+                      "subInstructions": []
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarGlobal"
+                  },
+                  "parameters": [
+                    "mutedFlag",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarGlobal"
+                      },
+                      "parameters": [
+                        "muted",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarGlobal"
+                      },
+                      "parameters": [
+                        "mutedFlag",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "muted",
+                        "=",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "mutedFlag",
+                        "=",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangeAnimation"
+                      },
+                      "parameters": [
+                        "Sound",
+                        "=",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "StopSoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarGlobal"
+                      },
+                      "parameters": [
+                        "muted",
+                        "=",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarGlobal"
+                      },
+                      "parameters": [
+                        "mutedFlag",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "muted",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "mutedFlag",
+                        "=",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangeAnimation"
+                      },
+                      "parameters": [
+                        "Sound",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "RePlaySoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
             }
           ],
           "parameters": []
@@ -1627,7 +2203,7 @@
       "oglZNear": 1,
       "r": 209,
       "standardSortMethod": true,
-      "stopSoundsOnStartup": true,
+      "stopSoundsOnStartup": false,
       "title": "",
       "v": 209,
       "uiSettings": {
@@ -1817,7 +2393,7 @@
           "persistentUuid": "54e8f93e-8f2f-4c49-9eae-683d648d26dd",
           "width": 0,
           "x": 115,
-          "y": 415,
+          "y": 411,
           "zOrder": 11,
           "numberProperties": [],
           "stringProperties": [],
@@ -2704,7 +3280,7 @@
       "oglZNear": 1,
       "r": 155,
       "standardSortMethod": true,
-      "stopSoundsOnStartup": true,
+      "stopSoundsOnStartup": false,
       "title": "",
       "v": 155,
       "uiSettings": {
@@ -2769,12 +3345,57 @@
           "value": ""
         },
         {
-          "name": "invincibilityStateChanged",
+          "name": "invincibilityFlag",
           "type": "string",
           "value": ""
         },
         {
           "name": "tempTimer",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "name": "powerupFlag",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "name": "invincibilityPower",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "name": "slowPower",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "name": "speedPower",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "name": "collisionFlag",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "name": "statsFlag",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "name": "stats",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "name": "entities",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "name": "entityFlag",
           "type": "string",
           "value": ""
         }
@@ -2982,7 +3603,7 @@
           "persistentUuid": "27aea3db-590c-40b9-a28d-b4466c0c0444",
           "width": 0,
           "x": 9,
-          "y": 532,
+          "y": 499,
           "zOrder": 12,
           "numberProperties": [],
           "stringProperties": [],
@@ -2994,11 +3615,11 @@
           "height": 0,
           "layer": "",
           "locked": false,
-          "name": "EnabledText",
+          "name": "InvincibilityEnabledText",
           "persistentUuid": "ae55b6bc-e5c7-48e1-9e43-ee967f79f8d5",
           "width": 0,
           "x": 168,
-          "y": 571,
+          "y": 555,
           "zOrder": 13,
           "numberProperties": [],
           "stringProperties": [],
@@ -3031,38 +3652,6 @@
           "width": 11,
           "x": -11,
           "y": -11,
-          "zOrder": 15,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 90,
-          "customSize": true,
-          "height": 816,
-          "layer": "",
-          "locked": false,
-          "name": "GameBarrier",
-          "persistentUuid": "bf012776-31a0-4f07-9b1f-7eb08bd01fd1",
-          "width": 11,
-          "x": 392,
-          "y": 198,
-          "zOrder": 15,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 90,
-          "customSize": true,
-          "height": 816,
-          "layer": "",
-          "locked": false,
-          "name": "GameBarrier",
-          "persistentUuid": "27463496-cff8-464e-8694-304dabda3980",
-          "width": 11,
-          "x": 397,
-          "y": -414,
           "zOrder": 15,
           "numberProperties": [],
           "stringProperties": [],
@@ -3160,6 +3749,70 @@
           "x": 136,
           "y": 344,
           "zOrder": 101,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "statsText",
+          "persistentUuid": "28db232e-c55f-4ebb-99ee-285d35966422",
+          "width": 0,
+          "x": 610,
+          "y": 39,
+          "zOrder": 102,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "StatsEnabledText",
+          "persistentUuid": "ab4f3557-97a8-445c-b7b9-829ca8066057",
+          "width": 0,
+          "x": 152,
+          "y": 575,
+          "zOrder": 103,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 12,
+          "layer": "",
+          "locked": false,
+          "name": "TopBarrier",
+          "persistentUuid": "a5153df5-0086-4763-a10c-e3296716d4ff",
+          "width": 822,
+          "x": -11,
+          "y": -11,
+          "zOrder": 104,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 11,
+          "layer": "",
+          "locked": false,
+          "name": "BottomBarrier",
+          "persistentUuid": "5a551a07-6db9-422b-94e3-a6c094e51b0f",
+          "width": 821,
+          "x": -10,
+          "y": 600,
+          "zOrder": 105,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3261,7 +3914,7 @@
           "underlined": false,
           "variables": [],
           "behaviors": [],
-          "string": "Developer Controls:\n\"1\" Ends the game\n\"2\" Toggles invincibility",
+          "string": "Developer Controls:\n\"1\" End game\n\"2\" Restart game\n\"3\" Toggles invincibility\n\"k\" Display statistics",
           "font": "",
           "characterSize": 15,
           "color": {
@@ -3292,7 +3945,26 @@
         {
           "bold": true,
           "italic": false,
-          "name": "EnabledText",
+          "name": "StatsEnabledText",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "Enabled",
+          "font": "",
+          "characterSize": 10,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 255
+          }
+        },
+        {
+          "bold": true,
+          "italic": false,
+          "name": "InvincibilityEnabledText",
           "smoothed": true,
           "tags": "",
           "type": "TextObject::Text",
@@ -5072,6 +5744,45 @@
             "g": 0,
             "r": 0
           }
+        },
+        {
+          "bold": false,
+          "italic": true,
+          "name": "statsText",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "stats here",
+          "font": "",
+          "characterSize": 15,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
+        },
+        {
+          "height": 32,
+          "name": "TopBarrier",
+          "tags": "",
+          "texture": "NewFile-1.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 32,
+          "variables": [],
+          "behaviors": []
+        },
+        {
+          "height": 32,
+          "name": "BottomBarrier",
+          "tags": "",
+          "texture": "NewFile-1-0.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 32,
+          "variables": [],
+          "behaviors": []
         }
       ],
       "events": [
@@ -5098,7 +5809,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Variables:\n\nGLOBAL: \nscore: keeps track of the player's points\n\nLOCAL:\nobstacleDirection: degree that the global force is applied to (270 degrees = up).\nobstacleSpeed: speed at which obstacles go up.\nsizeDecrease: how much to subtact from the scale of the snowball when it collides.\nsizeIncrease: how much to add to the scale of the snowball as the game goes on.\nspeedIncrease: how much to add to the speed of the snowball as the game goes on.\nspeedDecrease: how much to subtract to the speed of the snowball when it collides.\nsnowballSpeed: how fast the snowball goes\nstate: 0 = Game hasn't started, 1 = Game in action\ninvincibility: toggles if snowball can collide with objects or not - for DevControls. 0 = Disabled 1 = Enabled\ninvinciblityStateChanged: keeps track of if DevControls are enabled\nseconds: stores time elapsed in-game\ntempTimer: ????",
+              "comment": "Variables:\n\nGLOBAL: \nscore: keeps track of the player's points\n\nLOCAL:\nobstacleDirection: degree that the global force is applied to (270 degrees = up).\nobstacleSpeed: speed at which obstacles go up.\nsizeDecrease: how much to subtact from the scale of the snowball when it collides.\nsizeIncrease: how much to add to the scale of the snowball as the game goes on.\nspeedIncrease: how much to add to the speed of the snowball as the game goes on.\nspeedDecrease: how much to subtract to the speed of the snowball when it collides.\nsnowballSpeed: how fast the snowball goes\nstate: 0 = Game hasn't started, 1 = Game in action\ninvincibility: toggles if snowball can collide with objects or not - for DevControls. 0 = Disabled 1 = Enabled\ninvinciblityFlag: keeps track of if DevControls are enabled\nstats: toggles showing game stats - for DevControls. 0 = Disabled 1 = Enabled\nstatsFlag: keeps track of if DevControls are enabled\nseconds: stores time elapsed in-game\ntempTimer: ????\nentities: how many game objects are in the screen at any one time\nentityFlag: keeps track if object has left the screen or not\n\ncollisionFlag: keeps track if the user has collided with something for sound purposes 0 = not collided 1 = collision\n\npowerupStateChanged: keeps track of if the user has picked up a powerup\ninvincibilityPower: toggles if snowball can collide with objects. 0 = disabled  1 = enabled\nslowPower: toggles if snowball is slowed. 0 = disabled 1 = enabled\nspeedPower: toggles if snowball is fast. 0 = disabled 1 = enabled",
               "comment2": ""
             },
             {
@@ -5232,7 +5943,7 @@
                     "value": "ModVarScene"
                   },
                   "parameters": [
-                    "invincibilityStateChanged",
+                    "invincibilityFlag",
                     "=",
                     "0"
                   ],
@@ -5269,6 +5980,114 @@
                   },
                   "parameters": [
                     "tempTimer",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "powerupFlag",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "invincibilityPower",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "slowPower",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "speedPower",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "collisionFlag",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "statsFlag",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "stats",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "entities",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "entityFlag",
                     "=",
                     "0"
                   ],
@@ -5325,7 +6144,17 @@
                     "value": "Cache"
                   },
                   "parameters": [
-                    "EnabledText"
+                    "InvincibilityEnabledText"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "StatsEnabledText"
                   ],
                   "subInstructions": []
                 },
@@ -5356,6 +6185,16 @@
                   },
                   "parameters": [
                     "SilverBolt"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "statsText"
                   ],
                   "subInstructions": []
                 }
@@ -5435,6 +6274,27 @@
                   "parameters": [
                     "",
                     "\"powerupTimer\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "statsText",
+                    "=",
+                    "\"FPS: \" + ToString(round(1/TimeDelta())) + NewLine() +\n\"Entities: \" + ToString(Variable(entities)) + NewLine() + \n\"Time Played: \" + ToString(GlobalVariable(seconds)) + \"s\""
                   ],
                   "subInstructions": []
                 }
@@ -5617,7 +6477,7 @@
                   "colorR": 74,
                   "creationTime": 0,
                   "disabled": false,
-                  "folded": true,
+                  "folded": false,
                   "name": "Collision Events",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -5716,6 +6576,113 @@
                             "2"
                           ],
                           "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "collisionFlag",
+                            "=",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ResetTimer"
+                          },
+                          "parameters": [
+                            "",
+                            "\"collisionTimer\""
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "BuiltinCommonInstructions::And"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "collisionFlag",
+                                "=",
+                                "1"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": true,
+                                "value": "Timer"
+                              },
+                              "parameters": [
+                                "",
+                                "1",
+                                "\"collisionTimer\""
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": true,
+                                "value": "CollisionNP"
+                              },
+                              "parameters": [
+                                "Snowball",
+                                "Bush",
+                                "",
+                                "",
+                                ""
+                              ],
+                              "subInstructions": []
+                            }
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "collisionFlag",
+                            "=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "PlaySoundCanal"
+                          },
+                          "parameters": [
+                            "",
+                            "Corsica_S-Snow_Shoes-18.mp3",
+                            "1",
+                            "",
+                            "50",
+                            ""
+                          ],
+                          "subInstructions": []
                         }
                       ],
                       "events": []
@@ -5752,6 +6719,30 @@
                             ""
                           ],
                           "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "SeparateFromObjects"
+                          },
+                          "parameters": [
+                            "Snowball",
+                            "BottomBarrier",
+                            ""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "SeparateFromObjects"
+                          },
+                          "parameters": [
+                            "Snowball",
+                            "TopBarrier",
+                            ""
+                          ],
+                          "subInstructions": []
                         }
                       ],
                       "events": []
@@ -5765,7 +6756,7 @@
                   "colorR": 74,
                   "creationTime": 0,
                   "disabled": false,
-                  "folded": true,
+                  "folded": false,
                   "name": "Endless Scolling",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -5886,7 +6877,7 @@
                   "colorR": 74,
                   "creationTime": 0,
                   "disabled": false,
-                  "folded": true,
+                  "folded": false,
                   "name": "Snowball Mechanics",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -6139,7 +7130,7 @@
                   "colorR": 74,
                   "creationTime": 0,
                   "disabled": false,
-                  "folded": false,
+                  "folded": true,
                   "name": "Powerups",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -6167,7 +7158,7 @@
                             "textG": 0,
                             "textR": 0
                           },
-                          "comment": "Invincibility appears every 15 seconds",
+                          "comment": "Invincibility appears every 15 seconds, moves up in the scene.",
                           "comment2": ""
                         },
                         {
@@ -6443,6 +7434,18 @@
                                 "\"invincible\""
                               ],
                               "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "invincibilityPower",
+                                "=",
+                                "1"
+                              ],
+                              "subInstructions": []
                             }
                           ],
                           "events": []
@@ -6616,6 +7619,49 @@
                   "parameters": []
                 }
               ]
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "Distance"
+                  },
+                  "parameters": [
+                    "LargeRock",
+                    "BottomBarrier",
+                    "0",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": [],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "entities",
+                    "+",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
             }
           ],
           "parameters": []
@@ -6626,7 +7672,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Developer Controls",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -6694,6 +7740,39 @@
                     "Num2"
                   ],
                   "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Opening\"",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "Num3"
+                  ],
+                  "subInstructions": []
                 },
                 {
                   "type": {
@@ -6711,7 +7790,7 @@
                     "value": "ModVarScene"
                   },
                   "parameters": [
-                    "invincibilityStateChanged",
+                    "invincibilityFlag",
                     "=",
                     "0"
                   ],
@@ -6730,7 +7809,7 @@
                         "value": "VarScene"
                       },
                       "parameters": [
-                        "invincibilityStateChanged",
+                        "invincibility",
                         "=",
                         "0"
                       ],
@@ -6742,7 +7821,7 @@
                         "value": "VarScene"
                       },
                       "parameters": [
-                        "invincibility",
+                        "invincibilityFlag",
                         "=",
                         "0"
                       ],
@@ -6768,7 +7847,7 @@
                         "value": "ModVarScene"
                       },
                       "parameters": [
-                        "invincibilityStateChanged",
+                        "invincibilityFlag",
                         "=",
                         "1"
                       ],
@@ -6780,7 +7859,7 @@
                         "value": "Montre"
                       },
                       "parameters": [
-                        "EnabledText",
+                        "InvincibilityEnabledText",
                         ""
                       ],
                       "subInstructions": []
@@ -6799,7 +7878,7 @@
                         "value": "VarScene"
                       },
                       "parameters": [
-                        "invincibilityStateChanged",
+                        "invincibilityFlag",
                         "=",
                         "0"
                       ],
@@ -6825,7 +7904,197 @@
                         "value": "ModVarScene"
                       },
                       "parameters": [
+                        "invincibilityFlag",
+                        "=",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
                         "invincibility",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Cache"
+                      },
+                      "parameters": [
+                        "InvincibilityEnabledText"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "k"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": [],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "statsFlag",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "statsFlag",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "stats",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "stats",
+                        "=",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "statsFlag",
+                        "=",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Montre"
+                      },
+                      "parameters": [
+                        "statsText",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Montre"
+                      },
+                      "parameters": [
+                        "StatsEnabledText",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "statsFlag",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "stats",
+                        "=",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "stats",
                         "=",
                         "0"
                       ],
@@ -6837,7 +8106,7 @@
                         "value": "ModVarScene"
                       },
                       "parameters": [
-                        "invincibilityStateChanged",
+                        "statsFlag",
                         "=",
                         "1"
                       ],
@@ -6849,7 +8118,17 @@
                         "value": "Cache"
                       },
                       "parameters": [
-                        "EnabledText"
+                        "statsText"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Cache"
+                      },
+                      "parameters": [
+                        "StatsEnabledText"
                       ],
                       "subInstructions": []
                     }
@@ -6937,7 +8216,7 @@
       "oglZNear": 1,
       "r": 209,
       "standardSortMethod": true,
-      "stopSoundsOnStartup": true,
+      "stopSoundsOnStartup": false,
       "title": "",
       "v": 209,
       "uiSettings": {
