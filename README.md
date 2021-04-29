@@ -20,3 +20,8 @@ Playable here: https://lyledot.github.io/csc3224-finished-game/
 Snowball: https://www.gamedevmarket.net/asset/animated-snowball-game-projectile/<br>
 Heavitas Font: https://www.creativefabrica.com/product/heavitas/ref/106/<br>
 Arrow: http://www.pngmart.com/image/137859
+Invincible Power-Up texture: https://imgur.com/gallery/FlbXh/
+Speed Power-Up texture: https://pngimage.net/comic-speed-png-1/
+Slow Power-Up texture: https://seamless-pixels.blogspot.com/2014/10/stone-wall-texture-4770x3178.html?spref=pi
+Bossa BG Music: https://opengameart.org/content/bossa-nova
+Menu SFX: https://opengameart.org/content/7-assorted-sound-effects-menu-level-up
