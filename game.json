@@ -3655,11 +3655,6 @@
           "value": ""
         },
         {
-          "name": "powerupFlag",
-          "type": "string",
-          "value": ""
-        },
-        {
           "name": "invincibilityPower",
           "type": "string",
           "value": ""
@@ -3696,6 +3691,11 @@
         },
         {
           "name": "entityFlag",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "name": "powerUpChoice",
           "type": "string",
           "value": ""
         }
@@ -3776,7 +3776,7 @@
           "width": 0,
           "x": 9,
           "y": 499,
-          "zOrder": 12,
+          "zOrder": 99,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3791,8 +3791,8 @@
           "persistentUuid": "ae55b6bc-e5c7-48e1-9e43-ee967f79f8d5",
           "width": 0,
           "x": 168,
-          "y": 555,
-          "zOrder": 13,
+          "y": 556,
+          "zOrder": 99,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3854,8 +3854,8 @@
           "name": "statsText",
           "persistentUuid": "28db232e-c55f-4ebb-99ee-285d35966422",
           "width": 0,
-          "x": 610,
-          "y": 39,
+          "x": 647,
+          "y": 19,
           "zOrder": 102,
           "numberProperties": [],
           "stringProperties": [],
@@ -3871,8 +3871,8 @@
           "persistentUuid": "ab4f3557-97a8-445c-b7b9-829ca8066057",
           "width": 0,
           "x": 152,
-          "y": 575,
-          "zOrder": 103,
+          "y": 574,
+          "zOrder": 99,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -5868,7 +5868,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "Variables",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -5885,7 +5885,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Variables:\n\nGLOBAL: \nscore: keeps track of the player's points\nseconds: time elapsed since playing\nmuted: boolean expression 1 = muted 0 = playing\n\nLOCAL:\nobstacleDirection: degree that the global force is applied to (270 degrees = up).\nobstacleSpeed: speed at which obstacles go up.\nsizeDecrease: how much to subtact from the scale of the snowball when it collides.\nsizeIncrease: how much to add to the scale of the snowball as the game goes on.\nspeedIncrease: how much to add to the speed of the snowball as the game goes on.\nspeedDecrease: how much to subtract to the speed of the snowball when it collides.\nsnowballSpeed: how fast the snowball goes\nstate: 0 = Game hasn't started, 1 = Game in action\ninvincibility: toggles if snowball can collide with objects or not - for DevControls. 0 = Disabled 1 = Enabled\ninvinciblityFlag: keeps track of if DevControls are enabled\nstats: toggles showing game stats - for DevControls. 0 = Disabled 1 = Enabled\nstatsFlag: keeps track of if DevControls are enabled\nseconds: stores time elapsed in-game\ntempTimer: ????\nentities: how many game objects are in the screen at any one time\nentityFlag: keeps track if object has left the screen or not\n\ncollisionFlag: keeps track if the user has collided with something for sound purposes 0 = not collided 1 = collision\n\npowerupStateChanged: keeps track of if the user has picked up a powerup\ninvincibilityFlag: toggles if snowball can collide with objects. 0 = disabled  1 = enabled\nslowFlag: toggles if snowball is slowed. 0 = disabled 1 = enabled\nspeedFlag: toggles if snowball is fast. 0 = disabled 1 = enabled",
+              "comment": "Variables:\n\nGLOBAL: \nscore: keeps track of the player's points\nseconds: time elapsed since playing\nmuted: boolean expression 1 = muted 0 = playing\n\nLOCAL:\nobstacleDirection: degree that the global force is applied to (270 degrees = up).\nobstacleSpeed: speed at which obstacles go up.\nsizeDecrease: how much to subtact from the scale of the snowball when it collides.\nsizeIncrease: how much to add to the scale of the snowball as the game goes on.\nspeedIncrease: how much to add to the speed of the snowball as the game goes on.\nspeedDecrease: how much to subtract to the speed of the snowball when it collides.\nsnowballSpeed: how fast the snowball goes\nstate: 0 = Game hasn't started, 1 = Game in action\ninvincibility: toggles if snowball can collide with objects or not - for DevControls. 0 = Disabled 1 = Enabled\ninvinciblityFlag: keeps track of if DevControls are enabled\nstats: toggles showing game stats - for DevControls. 0 = Disabled 1 = Enabled\nstatsFlag: keeps track of if DevControls are enabled\nseconds: stores time elapsed in-game\ntempTimer: ????\nentities: how many game objects are in the screen at any one time\nentityFlag: keeps track if object has left the screen or not\n\ncollisionFlag: keeps track if the user has collided with something for sound purposes 0 = not collided 1 = collision\n\npowerupFlag: keeps track of if the user has picked up a powerup\ninvincibilityFlag: toggles if snowball can collide with objects. 0 = disabled  1 = enabled\nslowFlag: toggles if snowball is slowed. 0 = disabled 1 = enabled\nspeedFlag: toggles if snowball is fast. 0 = disabled 1 = enabled\n\npowerUpChoice: chooses a powerup to show the user every so-and-so seconds; 0 = none 1 = invincibility 2 = slow 3 = speed\npowerUpTimer: keeps track of how often to show powerups (should be between 5 - 20 seconds)",
               "comment2": ""
             },
             {
@@ -6168,6 +6168,18 @@
                     "0"
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "powerUpChoice",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": []
@@ -6339,7 +6351,7 @@
                   },
                   "parameters": [
                     "",
-                    "\"powerupTimer\""
+                    "\"powerUpTimer\""
                   ],
                   "subInstructions": []
                 },
@@ -6477,462 +6489,449 @@
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
               "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Creating obstacles every few seconds",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Timer"
-                  },
-                  "parameters": [
-                    "",
-                    "1",
-                    "\"rockTimer\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": [],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "LargeRock",
-                    "RandomInRange(30,700)",
-                    "RandomInRange(615,700)",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ResetTimer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"rockTimer\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarScene"
-                  },
-                  "parameters": [
-                    "entities",
-                    "+",
-                    "1"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Timer"
-                  },
-                  "parameters": [
-                    "",
-                    "2",
-                    "\"bushTimer\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": [],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "Bush",
-                    "RandomInRange(30,700)",
-                    "RandomInRange(615,700)",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ResetTimer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"bushTimer\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarScene"
-                  },
-                  "parameters": [
-                    "entities",
-                    "+",
-                    "1"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "CollisionNP"
-                  },
-                  "parameters": [
-                    "LargeRock",
-                    "TopBarrier",
-                    "-40",
-                    "",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": [],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarScene"
-                  },
-                  "parameters": [
-                    "entities",
-                    "-",
-                    "1"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "CollisionNP"
-                  },
-                  "parameters": [
-                    "Bush",
-                    "TopBarrier",
-                    "-40",
-                    "",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": [],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarScene"
-                  },
-                  "parameters": [
-                    "entities",
-                    "-",
-                    "1"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Initialising obstacle movement to start the game.",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "VarScene"
-                  },
-                  "parameters": [
-                    "state",
-                    "=",
-                    "1"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "MoveObjects"
-                  },
-                  "parameters": [
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "AddForceAL"
-                  },
-                  "parameters": [
-                    "Bush",
-                    "Variable(obstacleDirection)",
-                    "Variable(obstacleSpeed)",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "AddForceAL"
-                  },
-                  "parameters": [
-                    "LargeRock",
-                    "Variable(obstacleDirection)",
-                    "Variable(obstacleSpeed)",
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
+              "folded": true,
+              "name": "Obstacle Generation",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
-                  "colorB": 228,
-                  "colorG": 176,
-                  "colorR": 74,
-                  "creationTime": 0,
                   "disabled": false,
-                  "folded": true,
-                  "name": "Collision Events",
-                  "source": "",
-                  "type": "BuiltinCommonInstructions::Group",
-                  "events": [
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Creating obstacles every few seconds",
+                  "comment2": ""
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
                     {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Comment",
-                      "color": {
-                        "b": 109,
-                        "g": 230,
-                        "r": 255,
-                        "textB": 0,
-                        "textG": 0,
-                        "textR": 0
+                      "type": {
+                        "inverted": false,
+                        "value": "Timer"
                       },
-                      "comment": "If the snowball collides with any obstacles, it decreases in size and you lose points. Only collides as long as DevControls aren't enabled.",
-                      "comment2": ""
+                      "parameters": [
+                        "",
+                        "1",
+                        "\"rockTimer\""
+                      ],
+                      "subInstructions": []
                     },
                     {
+                      "type": {
+                        "inverted": false,
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": [],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "LargeRock",
+                        "RandomInRange(30,700)",
+                        "RandomInRange(615,700)",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ResetTimer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"rockTimer\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "entities",
+                        "+",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Timer"
+                      },
+                      "parameters": [
+                        "",
+                        "2",
+                        "\"bushTimer\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": [],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "Bush",
+                        "RandomInRange(30,700)",
+                        "RandomInRange(615,700)",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ResetTimer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"bushTimer\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "entities",
+                        "+",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "LargeRock",
+                        "TopBarrier",
+                        "-40",
+                        "",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": [],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "entities",
+                        "-",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "Bush",
+                        "TopBarrier",
+                        "-40",
+                        "",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": [],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "entities",
+                        "-",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "disabled": false,
+              "folded": false,
+              "name": "Game Initialisation",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Initialising obstacle movement to start the game.",
+                  "comment2": ""
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "state",
+                        "=",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "MoveObjects"
+                      },
+                      "parameters": [
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "AddForceAL"
+                      },
+                      "parameters": [
+                        "Bush",
+                        "Variable(obstacleDirection)",
+                        "Variable(obstacleSpeed)",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "AddForceAL"
+                      },
+                      "parameters": [
+                        "LargeRock",
+                        "Variable(obstacleDirection)",
+                        "Variable(obstacleSpeed)",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": [
+                    {
+                      "colorB": 228,
+                      "colorG": 176,
+                      "colorR": 74,
+                      "creationTime": 0,
                       "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
+                      "folded": true,
+                      "name": "Collision Events",
+                      "source": "",
+                      "type": "BuiltinCommonInstructions::Group",
+                      "events": [
                         {
-                          "type": {
-                            "inverted": false,
-                            "value": "VarScene"
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
                           },
-                          "parameters": [
-                            "invincibility",
-                            "=",
-                            "0"
-                          ],
-                          "subInstructions": []
+                          "comment": "If the snowball collides with any obstacles, it decreases in size and you lose points. Only collides as long as DevControls aren't enabled.",
+                          "comment2": ""
                         },
                         {
-                          "type": {
-                            "inverted": false,
-                            "value": "BuiltinCommonInstructions::Or"
-                          },
-                          "parameters": [],
-                          "subInstructions": [
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
                             {
                               "type": {
                                 "inverted": false,
-                                "value": "CollisionNP"
+                                "value": "VarScene"
                               },
                               "parameters": [
-                                "Snowball",
-                                "Bush",
-                                "",
-                                "",
-                                ""
+                                "invincibility",
+                                "=",
+                                "0"
                               ],
                               "subInstructions": []
                             },
                             {
                               "type": {
                                 "inverted": false,
-                                "value": "CollisionNP"
+                                "value": "BuiltinCommonInstructions::Or"
                               },
-                              "parameters": [
-                                "Snowball",
-                                "LargeRock",
-                                "",
-                                "",
-                                ""
-                              ],
-                              "subInstructions": []
+                              "parameters": [],
+                              "subInstructions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "CollisionNP"
+                                  },
+                                  "parameters": [
+                                    "Snowball",
+                                    "Bush",
+                                    "",
+                                    "",
+                                    ""
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "CollisionNP"
+                                  },
+                                  "parameters": [
+                                    "Snowball",
+                                    "LargeRock",
+                                    "",
+                                    "",
+                                    ""
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ]
                             }
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ChangeScale"
-                          },
-                          "parameters": [
-                            "Snowball",
-                            "-",
-                            "Variable(sizeDecrease)"
                           ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ModVarGlobal"
-                          },
-                          "parameters": [
-                            "score",
-                            "-",
-                            "2"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ModVarScene"
-                          },
-                          "parameters": [
-                            "collisionFlag",
-                            "=",
-                            "1"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ResetTimer"
-                          },
-                          "parameters": [
-                            "",
-                            "\"collisionTimer\""
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "BuiltinCommonInstructions::And"
-                          },
-                          "parameters": [],
-                          "subInstructions": [
+                          "actions": [
                             {
                               "type": {
                                 "inverted": false,
-                                "value": "VarScene"
+                                "value": "ChangeScale"
+                              },
+                              "parameters": [
+                                "Snowball",
+                                "-",
+                                "Variable(sizeDecrease)"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarGlobal"
+                              },
+                              "parameters": [
+                                "score",
+                                "-",
+                                "2"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarScene"
                               },
                               "parameters": [
                                 "collisionFlag",
@@ -6943,426 +6942,424 @@
                             },
                             {
                               "type": {
-                                "inverted": true,
-                                "value": "Timer"
+                                "inverted": false,
+                                "value": "ResetTimer"
                               },
                               "parameters": [
                                 "",
-                                "1",
                                 "\"collisionTimer\""
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "events": []
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "BuiltinCommonInstructions::And"
+                              },
+                              "parameters": [],
+                              "subInstructions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "VarScene"
+                                  },
+                                  "parameters": [
+                                    "collisionFlag",
+                                    "=",
+                                    "1"
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "Timer"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "1",
+                                    "\"collisionTimer\""
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "VarGlobal"
+                                  },
+                                  "parameters": [
+                                    "muted",
+                                    "=",
+                                    "0"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "collisionFlag",
+                                "=",
+                                "0"
                               ],
                               "subInstructions": []
                             },
                             {
                               "type": {
                                 "inverted": false,
-                                "value": "VarGlobal"
+                                "value": "PlaySoundCanal"
                               },
                               "parameters": [
-                                "muted",
+                                "",
+                                "Corsica_S-Snow_Shoes-18.mp3",
+                                "1",
+                                "",
+                                "50",
+                                ""
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "events": []
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Snowball cannot be out of bounds.",
+                          "comment2": ""
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "SeparateFromObjects"
+                              },
+                              "parameters": [
+                                "Snowball",
+                                "GameBarrier",
+                                ""
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "SeparateFromObjects"
+                              },
+                              "parameters": [
+                                "Snowball",
+                                "BottomBarrier",
+                                ""
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "SeparateFromObjects"
+                              },
+                              "parameters": [
+                                "Snowball",
+                                "TopBarrier",
+                                ""
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "events": []
+                        }
+                      ],
+                      "parameters": []
+                    },
+                    {
+                      "colorB": 228,
+                      "colorG": 176,
+                      "colorR": 74,
+                      "creationTime": 0,
+                      "disabled": false,
+                      "folded": true,
+                      "name": "Snowball Mechanics",
+                      "source": "",
+                      "type": "BuiltinCommonInstructions::Group",
+                      "events": [
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Snowball gradually gets bigger and adds towards the score. \nObstacles also slowly gets faster.\nTimer counting how long the user has been playing starts.",
+                          "comment2": ""
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "TextObject::String"
+                              },
+                              "parameters": [
+                                "ScoreText",
+                                "=",
+                                "\"Score: \" + ToString(GlobalVariable(score))"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ChangeScale"
+                              },
+                              "parameters": [
+                                "Snowball",
+                                "+",
+                                "Variable(sizeIncrease)"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "snowballSize",
+                                "+",
+                                "0.5"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarGlobal"
+                              },
+                              "parameters": [
+                                "score",
+                                "+",
+                                "1"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "obstacleSpeed",
+                                "+",
+                                "0.1"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "tempTimer",
+                                "+",
+                                "TimeDelta()"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "TextObject::String"
+                              },
+                              "parameters": [
+                                "TimeElapsedText",
+                                "=",
+                                "\"Time Elapsed: \" + ToString(GlobalVariable(seconds)) + \"s\""
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "events": []
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "If the temptimer has started:",
+                          "comment2": ""
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "tempTimer",
+                                ">=",
+                                "1"
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarGlobal"
+                              },
+                              "parameters": [
+                                "seconds",
+                                "+",
+                                "1"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "tempTimer",
                                 "=",
                                 "0"
                               ],
                               "subInstructions": []
                             }
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ModVarScene"
-                          },
-                          "parameters": [
-                            "collisionFlag",
-                            "=",
-                            "0"
                           ],
-                          "subInstructions": []
+                          "events": []
                         },
                         {
-                          "type": {
-                            "inverted": false,
-                            "value": "PlaySoundCanal"
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
                           },
-                          "parameters": [
-                            "",
-                            "Corsica_S-Snow_Shoes-18.mp3",
-                            "1",
-                            "",
-                            "50",
-                            ""
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Comment",
-                      "color": {
-                        "b": 109,
-                        "g": 230,
-                        "r": 255,
-                        "textB": 0,
-                        "textG": 0,
-                        "textR": 0
-                      },
-                      "comment": "Snowball cannot be out of bounds.",
-                      "comment2": ""
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "SeparateFromObjects"
-                          },
-                          "parameters": [
-                            "Snowball",
-                            "GameBarrier",
-                            ""
-                          ],
-                          "subInstructions": []
+                          "comment": "If Snowball size is less than 10x13, it changes the state to 2 and ends the game.",
+                          "comment2": ""
                         },
                         {
-                          "type": {
-                            "inverted": false,
-                            "value": "SeparateFromObjects"
-                          },
-                          "parameters": [
-                            "Snowball",
-                            "BottomBarrier",
-                            ""
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "SeparateFromObjects"
-                          },
-                          "parameters": [
-                            "Snowball",
-                            "TopBarrier",
-                            ""
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    }
-                  ],
-                  "parameters": []
-                },
-                {
-                  "colorB": 228,
-                  "colorG": 176,
-                  "colorR": 74,
-                  "creationTime": 0,
-                  "disabled": false,
-                  "folded": false,
-                  "name": "Endless Scolling",
-                  "source": "",
-                  "type": "BuiltinCommonInstructions::Group",
-                  "events": [
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Comment",
-                      "color": {
-                        "b": 109,
-                        "g": 230,
-                        "r": 255,
-                        "textB": 0,
-                        "textG": 0,
-                        "textR": 0
-                      },
-                      "comment": "All obstacles move up in the game frame endlessly, in random positions.",
-                      "comment2": ""
-                    }
-                  ],
-                  "parameters": []
-                },
-                {
-                  "colorB": 228,
-                  "colorG": 176,
-                  "colorR": 74,
-                  "creationTime": 0,
-                  "disabled": false,
-                  "folded": true,
-                  "name": "Snowball Mechanics",
-                  "source": "",
-                  "type": "BuiltinCommonInstructions::Group",
-                  "events": [
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Comment",
-                      "color": {
-                        "b": 109,
-                        "g": 230,
-                        "r": 255,
-                        "textB": 0,
-                        "textG": 0,
-                        "textR": 0
-                      },
-                      "comment": "Snowball gradually gets bigger and adds towards the score. \nObstacles also slowly gets faster.\nTimer counting how long the user has been playing starts.",
-                      "comment2": ""
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "TextObject::String"
-                          },
-                          "parameters": [
-                            "ScoreText",
-                            "=",
-                            "\"Score: \" + ToString(GlobalVariable(score))"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ChangeScale"
-                          },
-                          "parameters": [
-                            "Snowball",
-                            "+",
-                            "Variable(sizeIncrease)"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ModVarScene"
-                          },
-                          "parameters": [
-                            "snowballSize",
-                            "+",
-                            "0.5"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ModVarGlobal"
-                          },
-                          "parameters": [
-                            "score",
-                            "+",
-                            "1"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ModVarScene"
-                          },
-                          "parameters": [
-                            "obstacleSpeed",
-                            "+",
-                            "0.1"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ModVarScene"
-                          },
-                          "parameters": [
-                            "tempTimer",
-                            "+",
-                            "TimeDelta()"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "TextObject::String"
-                          },
-                          "parameters": [
-                            "TimeElapsedText",
-                            "=",
-                            "\"Time Elapsed: \" + ToString(GlobalVariable(seconds)) + \"s\""
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Comment",
-                      "color": {
-                        "b": 109,
-                        "g": 230,
-                        "r": 255,
-                        "textB": 0,
-                        "textG": 0,
-                        "textR": 0
-                      },
-                      "comment": "If the temptimer has started:",
-                      "comment2": ""
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "VarScene"
-                          },
-                          "parameters": [
-                            "tempTimer",
-                            ">=",
-                            "1"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ModVarGlobal"
-                          },
-                          "parameters": [
-                            "seconds",
-                            "+",
-                            "1"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ModVarScene"
-                          },
-                          "parameters": [
-                            "tempTimer",
-                            "=",
-                            "0"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Comment",
-                      "color": {
-                        "b": 109,
-                        "g": 230,
-                        "r": 255,
-                        "textB": 0,
-                        "textG": 0,
-                        "textR": 0
-                      },
-                      "comment": "If Snowball size is less than 10x13, it changes the state to 2 and ends the game.",
-                      "comment2": ""
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "BuiltinCommonInstructions::And"
-                          },
-                          "parameters": [],
-                          "subInstructions": [
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
                             {
                               "type": {
                                 "inverted": false,
-                                "value": "ScaleWidth"
+                                "value": "BuiltinCommonInstructions::And"
                               },
-                              "parameters": [
-                                "Snowball",
-                                "<=",
-                                "0.02"
-                              ],
-                              "subInstructions": []
-                            },
+                              "parameters": [],
+                              "subInstructions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ScaleWidth"
+                                  },
+                                  "parameters": [
+                                    "Snowball",
+                                    "<=",
+                                    "0.02"
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ScaleHeight"
+                                  },
+                                  "parameters": [
+                                    "Snowball",
+                                    "<=",
+                                    "0.01"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ]
+                            }
+                          ],
+                          "actions": [
                             {
                               "type": {
                                 "inverted": false,
-                                "value": "ScaleHeight"
+                                "value": "Scene"
                               },
                               "parameters": [
-                                "Snowball",
-                                "<=",
-                                "0.01"
+                                "",
+                                "\"GameOver\"",
+                                ""
                               ],
                               "subInstructions": []
                             }
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "Scene"
-                          },
-                          "parameters": [
-                            "",
-                            "\"GameOver\"",
-                            ""
                           ],
-                          "subInstructions": []
+                          "events": []
                         }
                       ],
-                      "events": []
-                    }
-                  ],
-                  "parameters": []
-                },
-                {
-                  "colorB": 228,
-                  "colorG": 176,
-                  "colorR": 74,
-                  "creationTime": 0,
-                  "disabled": false,
-                  "folded": false,
-                  "name": "Powerups",
-                  "source": "",
-                  "type": "BuiltinCommonInstructions::Group",
-                  "events": [
+                      "parameters": []
+                    },
                     {
                       "colorB": 228,
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
                       "disabled": false,
-                      "folded": true,
-                      "name": "Invincibility",
+                      "folded": false,
+                      "name": "Powerups",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
                       "events": [
@@ -7378,7 +7375,7 @@
                             "textG": 0,
                             "textR": 0
                           },
-                          "comment": "Invincibility appears every 15 seconds, moves up in the scene.",
+                          "comment": "powerUpTimer must be greater than 5-15 seconds before the game chooses a powerup to show",
                           "comment2": ""
                         },
                         {
@@ -7393,203 +7390,8 @@
                               },
                               "parameters": [
                                 "",
-                                "15",
-                                "\"invincibilityTimer\""
-                              ],
-                              "subInstructions": []
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "Create"
-                              },
-                              "parameters": [
-                                "",
-                                "GoldStar",
-                                "RandomInRange(10,780)",
-                                "615",
-                                ""
-                              ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "ModVarScene"
-                              },
-                              "parameters": [
-                                "entities",
-                                "+",
-                                "1"
-                              ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "ResetTimer"
-                              },
-                              "parameters": [
-                                "",
-                                "\"invincibilityTimer\""
-                              ],
-                              "subInstructions": []
-                            }
-                          ],
-                          "events": []
-                        },
-                        {
-                          "disabled": false,
-                          "folded": false,
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [],
-                          "actions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "MoveObjects"
-                              },
-                              "parameters": [
-                                ""
-                              ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "AddForceAL"
-                              },
-                              "parameters": [
-                                "GoldStar",
-                                "Variable(obstacleDirection)",
-                                "Variable(obstacleSpeed)",
-                                ""
-                              ],
-                              "subInstructions": []
-                            }
-                          ],
-                          "events": []
-                        },
-                        {
-                          "disabled": false,
-                          "folded": false,
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "BuiltinCommonInstructions::Or"
-                              },
-                              "parameters": [],
-                              "subInstructions": [
-                                {
-                                  "type": {
-                                    "inverted": false,
-                                    "value": "CollisionNP"
-                                  },
-                                  "parameters": [
-                                    "Snowball",
-                                    "GoldStar",
-                                    "",
-                                    "",
-                                    ""
-                                  ],
-                                  "subInstructions": []
-                                }
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "ModVarScene"
-                              },
-                              "parameters": [
-                                "invincibilityFlag",
-                                "=",
-                                "1"
-                              ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "ModVarScene"
-                              },
-                              "parameters": [
-                                "invincibility",
-                                "=",
-                                "1"
-                              ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "SetAnimationName"
-                              },
-                              "parameters": [
-                                "Snowball",
-                                "\"invincible\""
-                              ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "Delete"
-                              },
-                              "parameters": [
-                                "GoldStar",
-                                ""
-                              ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "ResetTimer"
-                              },
-                              "parameters": [
-                                "",
-                                "\"invincibilityTimer\""
-                              ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "ModVarScene"
-                              },
-                              "parameters": [
-                                "entities",
-                                "-",
-                                "1"
-                              ],
-                              "subInstructions": []
-                            }
-                          ],
-                          "events": []
-                        },
-                        {
-                          "disabled": false,
-                          "folded": false,
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "CollisionNP"
-                              },
-                              "parameters": [
-                                "GoldStar",
-                                "TopBarrier",
-                                "",
-                                "",
-                                ""
+                                "2",
+                                "\"powerUpTimer\""
                               ],
                               "subInstructions": []
                             },
@@ -7609,9 +7411,20 @@
                                 "value": "ModVarScene"
                               },
                               "parameters": [
-                                "entities",
-                                "-",
-                                "1"
+                                "powerUpChoice",
+                                "=",
+                                "RandomInRange(1,3)"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ResetTimer"
+                              },
+                              "parameters": [
+                                "",
+                                "\"cooldownTimer\""
                               ],
                               "subInstructions": []
                             }
@@ -7620,22 +7433,7 @@
                         },
                         {
                           "disabled": false,
-                          "folded": false,
-                          "type": "BuiltinCommonInstructions::Comment",
-                          "color": {
-                            "b": 109,
-                            "g": 230,
-                            "r": 255,
-                            "textB": 0,
-                            "textG": 0,
-                            "textR": 0
-                          },
-                          "comment": "Invincibility only lasts 5 seconds",
-                          "comment2": ""
-                        },
-                        {
-                          "disabled": false,
-                          "folded": false,
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -7644,7 +7442,7 @@
                                 "value": "VarScene"
                               },
                               "parameters": [
-                                "invincibilityFlag",
+                                "powerUpChoice",
                                 "=",
                                 "1"
                               ],
@@ -7656,87 +7454,1188 @@
                             {
                               "disabled": false,
                               "folded": false,
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "If powerUpChoice is 1, release an invincibility powerUp",
+                              "comment2": ""
+                            },
+                            {
+                              "colorB": 228,
+                              "colorG": 176,
+                              "colorR": 74,
+                              "creationTime": 0,
+                              "disabled": false,
+                              "folded": false,
+                              "name": "Invincibility",
+                              "source": "",
+                              "type": "BuiltinCommonInstructions::Group",
+                              "events": [
                                 {
-                                  "type": {
-                                    "inverted": false,
-                                    "value": "Timer"
-                                  },
-                                  "parameters": [
-                                    "",
-                                    "5",
-                                    "\"invincibilityTimer\""
+                                  "disabled": false,
+                                  "folded": false,
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "BuiltinCommonInstructions::Once"
+                                      },
+                                      "parameters": [],
+                                      "subInstructions": []
+                                    }
                                   ],
-                                  "subInstructions": []
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "Create"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "GoldStar",
+                                        "RandomInRange(10,780)",
+                                        "615",
+                                        ""
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "ModVarScene"
+                                      },
+                                      "parameters": [
+                                        "entities",
+                                        "+",
+                                        "1"
+                                      ],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "events": []
+                                },
+                                {
+                                  "disabled": false,
+                                  "folded": false,
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "MoveObjects"
+                                      },
+                                      "parameters": [
+                                        ""
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "AddForceAL"
+                                      },
+                                      "parameters": [
+                                        "GoldStar",
+                                        "Variable(obstacleDirection)",
+                                        "Variable(obstacleSpeed)",
+                                        ""
+                                      ],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "events": []
+                                },
+                                {
+                                  "disabled": false,
+                                  "folded": false,
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "BuiltinCommonInstructions::Or"
+                                      },
+                                      "parameters": [],
+                                      "subInstructions": [
+                                        {
+                                          "type": {
+                                            "inverted": false,
+                                            "value": "CollisionNP"
+                                          },
+                                          "parameters": [
+                                            "Snowball",
+                                            "GoldStar",
+                                            "",
+                                            "",
+                                            ""
+                                          ],
+                                          "subInstructions": []
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "ModVarScene"
+                                      },
+                                      "parameters": [
+                                        "invincibilityFlag",
+                                        "=",
+                                        "1"
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "ModVarScene"
+                                      },
+                                      "parameters": [
+                                        "invincibility",
+                                        "=",
+                                        "1"
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "SetAnimationName"
+                                      },
+                                      "parameters": [
+                                        "Snowball",
+                                        "\"invincible\""
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "Delete"
+                                      },
+                                      "parameters": [
+                                        "GoldStar",
+                                        ""
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "ResetTimer"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "\"invincibilityTimer\""
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "ModVarScene"
+                                      },
+                                      "parameters": [
+                                        "entities",
+                                        "-",
+                                        "1"
+                                      ],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "events": []
+                                },
+                                {
+                                  "disabled": false,
+                                  "folded": false,
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "CollisionNP"
+                                      },
+                                      "parameters": [
+                                        "GoldStar",
+                                        "TopBarrier",
+                                        "",
+                                        "",
+                                        ""
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "BuiltinCommonInstructions::Once"
+                                      },
+                                      "parameters": [],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "ModVarScene"
+                                      },
+                                      "parameters": [
+                                        "entities",
+                                        "-",
+                                        "1"
+                                      ],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "events": []
+                                },
+                                {
+                                  "disabled": false,
+                                  "folded": false,
+                                  "type": "BuiltinCommonInstructions::Comment",
+                                  "color": {
+                                    "b": 109,
+                                    "g": 230,
+                                    "r": 255,
+                                    "textB": 0,
+                                    "textG": 0,
+                                    "textR": 0
+                                  },
+                                  "comment": "Invincibility only lasts 5 seconds",
+                                  "comment2": ""
+                                },
+                                {
+                                  "disabled": false,
+                                  "folded": false,
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "VarScene"
+                                      },
+                                      "parameters": [
+                                        "invincibilityFlag",
+                                        "=",
+                                        "1"
+                                      ],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "actions": [],
+                                  "events": [
+                                    {
+                                      "disabled": false,
+                                      "folded": false,
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "inverted": false,
+                                            "value": "Timer"
+                                          },
+                                          "parameters": [
+                                            "",
+                                            "5",
+                                            "\"invincibilityTimer\""
+                                          ],
+                                          "subInstructions": []
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "inverted": false,
+                                            "value": "ModVarScene"
+                                          },
+                                          "parameters": [
+                                            "invincibilityFlag",
+                                            "=",
+                                            "0"
+                                          ],
+                                          "subInstructions": []
+                                        },
+                                        {
+                                          "type": {
+                                            "inverted": false,
+                                            "value": "ModVarScene"
+                                          },
+                                          "parameters": [
+                                            "invincibility",
+                                            "=",
+                                            "0"
+                                          ],
+                                          "subInstructions": []
+                                        },
+                                        {
+                                          "type": {
+                                            "inverted": false,
+                                            "value": "SetAnimationName"
+                                          },
+                                          "parameters": [
+                                            "Snowball",
+                                            "\"normal\""
+                                          ],
+                                          "subInstructions": []
+                                        },
+                                        {
+                                          "type": {
+                                            "inverted": false,
+                                            "value": "ResetTimer"
+                                          },
+                                          "parameters": [
+                                            "",
+                                            "\"invincibilityTimer\""
+                                          ],
+                                          "subInstructions": []
+                                        }
+                                      ],
+                                      "events": []
+                                    }
+                                  ]
                                 }
                               ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "inverted": false,
-                                    "value": "ModVarScene"
-                                  },
-                                  "parameters": [
-                                    "invincibilityFlag",
-                                    "=",
-                                    "0"
-                                  ],
-                                  "subInstructions": []
-                                },
-                                {
-                                  "type": {
-                                    "inverted": false,
-                                    "value": "ModVarScene"
-                                  },
-                                  "parameters": [
-                                    "invincibility",
-                                    "=",
-                                    "0"
-                                  ],
-                                  "subInstructions": []
-                                },
-                                {
-                                  "type": {
-                                    "inverted": false,
-                                    "value": "SetAnimationName"
-                                  },
-                                  "parameters": [
-                                    "Snowball",
-                                    "\"normal\""
-                                  ],
-                                  "subInstructions": []
-                                },
-                                {
-                                  "type": {
-                                    "inverted": false,
-                                    "value": "ResetTimer"
-                                  },
-                                  "parameters": [
-                                    "",
-                                    "\"invincibilityTimer\""
-                                  ],
-                                  "subInstructions": []
-                                }
-                              ],
-                              "events": []
+                              "parameters": []
                             }
                           ]
-                        }
-                      ],
-                      "parameters": []
-                    },
-                    {
-                      "colorB": 228,
-                      "colorG": 176,
-                      "colorR": 74,
-                      "creationTime": 0,
-                      "disabled": false,
-                      "folded": false,
-                      "name": "Slow",
-                      "source": "",
-                      "type": "BuiltinCommonInstructions::Group",
-                      "events": [
+                        },
+                        {
+                          "disabled": false,
+                          "folded": true,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "powerUpChoice",
+                                "=",
+                                "2"
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "If powerUpChoice is 2, release an slow powerUp",
+                              "comment2": ""
+                            },
+                            {
+                              "colorB": 228,
+                              "colorG": 176,
+                              "colorR": 74,
+                              "creationTime": 0,
+                              "disabled": false,
+                              "folded": true,
+                              "name": "Slow",
+                              "source": "",
+                              "type": "BuiltinCommonInstructions::Group",
+                              "events": [
+                                {
+                                  "disabled": false,
+                                  "folded": false,
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "BuiltinCommonInstructions::Once"
+                                      },
+                                      "parameters": [],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "Create"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "ShieldRedPowerup",
+                                        "RandomInRange(10,780)",
+                                        "615",
+                                        ""
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "ModVarScene"
+                                      },
+                                      "parameters": [
+                                        "entities",
+                                        "+",
+                                        "1"
+                                      ],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "events": []
+                                },
+                                {
+                                  "disabled": false,
+                                  "folded": false,
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "MoveObjects"
+                                      },
+                                      "parameters": [
+                                        ""
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "AddForceAL"
+                                      },
+                                      "parameters": [
+                                        "ShieldRedPowerup",
+                                        "Variable(obstacleDirection)",
+                                        "Variable(obstacleSpeed)",
+                                        ""
+                                      ],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "events": []
+                                },
+                                {
+                                  "disabled": false,
+                                  "folded": false,
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "BuiltinCommonInstructions::Or"
+                                      },
+                                      "parameters": [],
+                                      "subInstructions": [
+                                        {
+                                          "type": {
+                                            "inverted": false,
+                                            "value": "CollisionNP"
+                                          },
+                                          "parameters": [
+                                            "Snowball",
+                                            "ShieldRedPowerup",
+                                            "",
+                                            "",
+                                            ""
+                                          ],
+                                          "subInstructions": []
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "ModVarScene"
+                                      },
+                                      "parameters": [
+                                        "slowFlag",
+                                        "=",
+                                        "1"
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "TopDownMovementBehavior::Acceleration"
+                                      },
+                                      "parameters": [
+                                        "Snowball",
+                                        "TopDownMovement",
+                                        "=",
+                                        "100"
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "TopDownMovementBehavior::MaxSpeed"
+                                      },
+                                      "parameters": [
+                                        "Snowball",
+                                        "TopDownMovement",
+                                        "=",
+                                        "75"
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "SetAnimationName"
+                                      },
+                                      "parameters": [
+                                        "Snowball",
+                                        "\"invincible\""
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "Delete"
+                                      },
+                                      "parameters": [
+                                        "ShieldRedPowerup",
+                                        ""
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "ModVarScene"
+                                      },
+                                      "parameters": [
+                                        "entities",
+                                        "-",
+                                        "1"
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "ResetTimer"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "\"slowTimer\""
+                                      ],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "events": []
+                                },
+                                {
+                                  "disabled": false,
+                                  "folded": false,
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "CollisionNP"
+                                      },
+                                      "parameters": [
+                                        "ShieldRedPowerup",
+                                        "TopBarrier",
+                                        "",
+                                        "",
+                                        ""
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "BuiltinCommonInstructions::Once"
+                                      },
+                                      "parameters": [],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "ModVarScene"
+                                      },
+                                      "parameters": [
+                                        "entities",
+                                        "-",
+                                        "1"
+                                      ],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "events": []
+                                },
+                                {
+                                  "disabled": false,
+                                  "folded": false,
+                                  "type": "BuiltinCommonInstructions::Comment",
+                                  "color": {
+                                    "b": 109,
+                                    "g": 230,
+                                    "r": 255,
+                                    "textB": 0,
+                                    "textG": 0,
+                                    "textR": 0
+                                  },
+                                  "comment": "Slow only lasts 5 seconds",
+                                  "comment2": ""
+                                },
+                                {
+                                  "disabled": false,
+                                  "folded": false,
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "VarScene"
+                                      },
+                                      "parameters": [
+                                        "slowFlag",
+                                        "=",
+                                        "1"
+                                      ],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "actions": [],
+                                  "events": [
+                                    {
+                                      "disabled": false,
+                                      "folded": false,
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "inverted": false,
+                                            "value": "Timer"
+                                          },
+                                          "parameters": [
+                                            "",
+                                            "5",
+                                            "\"slowTimer\""
+                                          ],
+                                          "subInstructions": []
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "inverted": false,
+                                            "value": "ModVarScene"
+                                          },
+                                          "parameters": [
+                                            "slowFlag",
+                                            "=",
+                                            "0"
+                                          ],
+                                          "subInstructions": []
+                                        },
+                                        {
+                                          "type": {
+                                            "inverted": false,
+                                            "value": "TopDownMovementBehavior::Acceleration"
+                                          },
+                                          "parameters": [
+                                            "Snowball",
+                                            "TopDownMovement",
+                                            "=",
+                                            "300"
+                                          ],
+                                          "subInstructions": []
+                                        },
+                                        {
+                                          "type": {
+                                            "inverted": false,
+                                            "value": "TopDownMovementBehavior::MaxSpeed"
+                                          },
+                                          "parameters": [
+                                            "Snowball",
+                                            "TopDownMovement",
+                                            "=",
+                                            "200"
+                                          ],
+                                          "subInstructions": []
+                                        },
+                                        {
+                                          "type": {
+                                            "inverted": false,
+                                            "value": "SetAnimationName"
+                                          },
+                                          "parameters": [
+                                            "Snowball",
+                                            "\"normal\""
+                                          ],
+                                          "subInstructions": []
+                                        },
+                                        {
+                                          "type": {
+                                            "inverted": false,
+                                            "value": "ResetTimer"
+                                          },
+                                          "parameters": [
+                                            "",
+                                            "\"slowTimer\""
+                                          ],
+                                          "subInstructions": []
+                                        }
+                                      ],
+                                      "events": []
+                                    }
+                                  ]
+                                }
+                              ],
+                              "parameters": []
+                            }
+                          ]
+                        },
+                        {
+                          "disabled": false,
+                          "folded": true,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "powerUpChoice",
+                                "=",
+                                "3"
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "If powerUpChoice is 1, release an speed powerUp",
+                              "comment2": ""
+                            },
+                            {
+                              "colorB": 228,
+                              "colorG": 176,
+                              "colorR": 74,
+                              "creationTime": 0,
+                              "disabled": false,
+                              "folded": true,
+                              "name": "Speed",
+                              "source": "",
+                              "type": "BuiltinCommonInstructions::Group",
+                              "events": [
+                                {
+                                  "disabled": false,
+                                  "folded": false,
+                                  "type": "BuiltinCommonInstructions::Comment",
+                                  "color": {
+                                    "b": 109,
+                                    "g": 230,
+                                    "r": 255,
+                                    "textB": 0,
+                                    "textG": 0,
+                                    "textR": 0
+                                  },
+                                  "comment": "Speed appears every 6 seconds, moves up in the scene.",
+                                  "comment2": ""
+                                },
+                                {
+                                  "disabled": false,
+                                  "folded": false,
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "BuiltinCommonInstructions::Once"
+                                      },
+                                      "parameters": [],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "Create"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "SilverBolt",
+                                        "RandomInRange(10,780)",
+                                        "615",
+                                        ""
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "ModVarScene"
+                                      },
+                                      "parameters": [
+                                        "entities",
+                                        "+",
+                                        "1"
+                                      ],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "events": []
+                                },
+                                {
+                                  "disabled": false,
+                                  "folded": false,
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "MoveObjects"
+                                      },
+                                      "parameters": [
+                                        ""
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "AddForceAL"
+                                      },
+                                      "parameters": [
+                                        "SilverBolt",
+                                        "Variable(obstacleDirection)",
+                                        "Variable(obstacleSpeed)",
+                                        ""
+                                      ],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "events": []
+                                },
+                                {
+                                  "disabled": false,
+                                  "folded": false,
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "BuiltinCommonInstructions::Or"
+                                      },
+                                      "parameters": [],
+                                      "subInstructions": [
+                                        {
+                                          "type": {
+                                            "inverted": false,
+                                            "value": "CollisionNP"
+                                          },
+                                          "parameters": [
+                                            "Snowball",
+                                            "SilverBolt",
+                                            "",
+                                            "",
+                                            ""
+                                          ],
+                                          "subInstructions": []
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "ModVarScene"
+                                      },
+                                      "parameters": [
+                                        "speedFlag",
+                                        "=",
+                                        "1"
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "TopDownMovementBehavior::Acceleration"
+                                      },
+                                      "parameters": [
+                                        "Snowball",
+                                        "TopDownMovement",
+                                        "=",
+                                        "500"
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "TopDownMovementBehavior::MaxSpeed"
+                                      },
+                                      "parameters": [
+                                        "Snowball",
+                                        "TopDownMovement",
+                                        "=",
+                                        "325"
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "SetAnimationName"
+                                      },
+                                      "parameters": [
+                                        "Snowball",
+                                        "\"invincible\""
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "Delete"
+                                      },
+                                      "parameters": [
+                                        "SilverBolt",
+                                        ""
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "ResetTimer"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "\"speedTimer\""
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "ModVarScene"
+                                      },
+                                      "parameters": [
+                                        "entities",
+                                        "-",
+                                        "1"
+                                      ],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "events": []
+                                },
+                                {
+                                  "disabled": false,
+                                  "folded": false,
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "CollisionNP"
+                                      },
+                                      "parameters": [
+                                        "SilverBolt",
+                                        "TopBarrier",
+                                        "",
+                                        "",
+                                        ""
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "BuiltinCommonInstructions::Once"
+                                      },
+                                      "parameters": [],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "ModVarScene"
+                                      },
+                                      "parameters": [
+                                        "entities",
+                                        "-",
+                                        "1"
+                                      ],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "events": []
+                                },
+                                {
+                                  "disabled": false,
+                                  "folded": false,
+                                  "type": "BuiltinCommonInstructions::Comment",
+                                  "color": {
+                                    "b": 109,
+                                    "g": 230,
+                                    "r": 255,
+                                    "textB": 0,
+                                    "textG": 0,
+                                    "textR": 0
+                                  },
+                                  "comment": "Slow only lasts 5 seconds",
+                                  "comment2": ""
+                                },
+                                {
+                                  "disabled": false,
+                                  "folded": false,
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "VarScene"
+                                      },
+                                      "parameters": [
+                                        "speedFlag",
+                                        "=",
+                                        "1"
+                                      ],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "actions": [],
+                                  "events": [
+                                    {
+                                      "disabled": false,
+                                      "folded": false,
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "inverted": false,
+                                            "value": "Timer"
+                                          },
+                                          "parameters": [
+                                            "",
+                                            "5",
+                                            "\"speedTimer\""
+                                          ],
+                                          "subInstructions": []
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "inverted": false,
+                                            "value": "ModVarScene"
+                                          },
+                                          "parameters": [
+                                            "speedFlag",
+                                            "=",
+                                            "0"
+                                          ],
+                                          "subInstructions": []
+                                        },
+                                        {
+                                          "type": {
+                                            "inverted": false,
+                                            "value": "TopDownMovementBehavior::Acceleration"
+                                          },
+                                          "parameters": [
+                                            "Snowball",
+                                            "TopDownMovement",
+                                            "=",
+                                            "300"
+                                          ],
+                                          "subInstructions": []
+                                        },
+                                        {
+                                          "type": {
+                                            "inverted": false,
+                                            "value": "TopDownMovementBehavior::MaxSpeed"
+                                          },
+                                          "parameters": [
+                                            "Snowball",
+                                            "TopDownMovement",
+                                            "=",
+                                            "200"
+                                          ],
+                                          "subInstructions": []
+                                        },
+                                        {
+                                          "type": {
+                                            "inverted": false,
+                                            "value": "SetAnimationName"
+                                          },
+                                          "parameters": [
+                                            "Snowball",
+                                            "\"normal\""
+                                          ],
+                                          "subInstructions": []
+                                        },
+                                        {
+                                          "type": {
+                                            "inverted": false,
+                                            "value": "ResetTimer"
+                                          },
+                                          "parameters": [
+                                            "",
+                                            "\"speedTimer\""
+                                          ],
+                                          "subInstructions": []
+                                        }
+                                      ],
+                                      "events": []
+                                    }
+                                  ]
+                                }
+                              ],
+                              "parameters": []
+                            }
+                          ]
+                        },
                         {
                           "disabled": false,
                           "folded": false,
@@ -7749,7 +8648,7 @@
                             "textG": 0,
                             "textR": 0
                           },
-                          "comment": "Slow appears every 5 seconds, moves up in the scene.",
+                          "comment": "Reset the powerUpChoice",
                           "comment2": ""
                         },
                         {
@@ -7764,205 +8663,8 @@
                               },
                               "parameters": [
                                 "",
-                                "3",
-                                "\"slowTimer\""
-                              ],
-                              "subInstructions": []
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "Create"
-                              },
-                              "parameters": [
-                                "",
-                                "ShieldRedPowerup",
-                                "RandomInRange(10,780)",
-                                "615",
-                                ""
-                              ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "ResetTimer"
-                              },
-                              "parameters": [
-                                "",
-                                "\"slowTimer\""
-                              ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "ModVarScene"
-                              },
-                              "parameters": [
-                                "entities",
-                                "+",
-                                "1"
-                              ],
-                              "subInstructions": []
-                            }
-                          ],
-                          "events": []
-                        },
-                        {
-                          "disabled": false,
-                          "folded": false,
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [],
-                          "actions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "MoveObjects"
-                              },
-                              "parameters": [
-                                ""
-                              ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "AddForceAL"
-                              },
-                              "parameters": [
-                                "ShieldRedPowerup",
-                                "Variable(obstacleDirection)",
-                                "Variable(obstacleSpeed)",
-                                ""
-                              ],
-                              "subInstructions": []
-                            }
-                          ],
-                          "events": []
-                        },
-                        {
-                          "disabled": false,
-                          "folded": false,
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "BuiltinCommonInstructions::Or"
-                              },
-                              "parameters": [],
-                              "subInstructions": [
-                                {
-                                  "type": {
-                                    "inverted": false,
-                                    "value": "CollisionNP"
-                                  },
-                                  "parameters": [
-                                    "Snowball",
-                                    "ShieldRedPowerup",
-                                    "",
-                                    "",
-                                    ""
-                                  ],
-                                  "subInstructions": []
-                                }
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "ModVarScene"
-                              },
-                              "parameters": [
-                                "slowFlag",
-                                "=",
-                                "1"
-                              ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "TopDownMovementBehavior::Acceleration"
-                              },
-                              "parameters": [
-                                "Snowball",
-                                "TopDownMovement",
-                                "=",
-                                "150"
-                              ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "TopDownMovementBehavior::MaxSpeed"
-                              },
-                              "parameters": [
-                                "Snowball",
-                                "TopDownMovement",
-                                "=",
-                                "100"
-                              ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "SetAnimationName"
-                              },
-                              "parameters": [
-                                "Snowball",
-                                "\"invincible\""
-                              ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "Delete"
-                              },
-                              "parameters": [
-                                "ShieldRedPowerup",
-                                ""
-                              ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "ResetTimer"
-                              },
-                              "parameters": [
-                                "",
-                                "\"slowTimer\""
-                              ],
-                              "subInstructions": []
-                            }
-                          ],
-                          "events": []
-                        },
-                        {
-                          "disabled": false,
-                          "folded": false,
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "CollisionNP"
-                              },
-                              "parameters": [
-                                "ShieldRedPowerup",
-                                "TopBarrier",
-                                "",
-                                "",
-                                ""
+                                "5",
+                                "\"cooldownTimer\""
                               ],
                               "subInstructions": []
                             },
@@ -7979,224 +8681,23 @@
                             {
                               "type": {
                                 "inverted": false,
-                                "value": "ModVarScene"
-                              },
-                              "parameters": [
-                                "entities",
-                                "-",
-                                "1"
-                              ],
-                              "subInstructions": []
-                            }
-                          ],
-                          "events": []
-                        },
-                        {
-                          "disabled": false,
-                          "folded": false,
-                          "type": "BuiltinCommonInstructions::Comment",
-                          "color": {
-                            "b": 109,
-                            "g": 230,
-                            "r": 255,
-                            "textB": 0,
-                            "textG": 0,
-                            "textR": 0
-                          },
-                          "comment": "Slow only lasts 5 seconds",
-                          "comment2": ""
-                        },
-                        {
-                          "disabled": false,
-                          "folded": false,
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "VarScene"
-                              },
-                              "parameters": [
-                                "slowFlag",
-                                "=",
-                                "1"
-                              ],
-                              "subInstructions": []
-                            }
-                          ],
-                          "actions": [],
-                          "events": [
-                            {
-                              "disabled": false,
-                              "folded": false,
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "inverted": false,
-                                    "value": "Timer"
-                                  },
-                                  "parameters": [
-                                    "",
-                                    "5",
-                                    "\"slowTimer\""
-                                  ],
-                                  "subInstructions": []
-                                }
-                              ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "inverted": false,
-                                    "value": "ModVarScene"
-                                  },
-                                  "parameters": [
-                                    "slowFlag",
-                                    "=",
-                                    "0"
-                                  ],
-                                  "subInstructions": []
-                                },
-                                {
-                                  "type": {
-                                    "inverted": false,
-                                    "value": "TopDownMovementBehavior::Acceleration"
-                                  },
-                                  "parameters": [
-                                    "Snowball",
-                                    "TopDownMovement",
-                                    "=",
-                                    "300"
-                                  ],
-                                  "subInstructions": []
-                                },
-                                {
-                                  "type": {
-                                    "inverted": false,
-                                    "value": "TopDownMovementBehavior::MaxSpeed"
-                                  },
-                                  "parameters": [
-                                    "Snowball",
-                                    "TopDownMovement",
-                                    "=",
-                                    "200"
-                                  ],
-                                  "subInstructions": []
-                                },
-                                {
-                                  "type": {
-                                    "inverted": false,
-                                    "value": "SetAnimationName"
-                                  },
-                                  "parameters": [
-                                    "Snowball",
-                                    "\"normal\""
-                                  ],
-                                  "subInstructions": []
-                                },
-                                {
-                                  "type": {
-                                    "inverted": false,
-                                    "value": "ResetTimer"
-                                  },
-                                  "parameters": [
-                                    "",
-                                    "\"slowTimer\""
-                                  ],
-                                  "subInstructions": []
-                                },
-                                {
-                                  "type": {
-                                    "inverted": false,
-                                    "value": "TextObject::String"
-                                  },
-                                  "parameters": [
-                                    "testText",
-                                    "=",
-                                    "\"yup\""
-                                  ],
-                                  "subInstructions": []
-                                }
-                              ],
-                              "events": []
-                            }
-                          ]
-                        }
-                      ],
-                      "parameters": []
-                    },
-                    {
-                      "colorB": 228,
-                      "colorG": 176,
-                      "colorR": 74,
-                      "creationTime": 0,
-                      "disabled": false,
-                      "folded": true,
-                      "name": "Speed",
-                      "source": "",
-                      "type": "BuiltinCommonInstructions::Group",
-                      "events": [
-                        {
-                          "disabled": false,
-                          "folded": false,
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "Timer"
-                              },
-                              "parameters": [
-                                "",
-                                "30",
-                                "\"speedTimer\""
-                              ],
-                              "subInstructions": []
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "MoveObjects"
-                              },
-                              "parameters": [
-                                ""
-                              ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "Montre"
-                              },
-                              "parameters": [
-                                "SilverBolt",
-                                ""
-                              ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "AddForceAL"
-                              },
-                              "parameters": [
-                                "SilverBolt",
-                                "Variable(obstacleDirection)",
-                                "Variable(obstacleSpeed)",
-                                ""
-                              ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": false,
                                 "value": "ResetTimer"
                               },
                               "parameters": [
                                 "",
-                                "\"speedTimer\""
+                                "\"powerUpTimer\""
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "powerUpChoice",
+                                "=",
+                                "0"
                               ],
                               "subInstructions": []
                             }
@@ -8206,10 +8707,10 @@
                       ],
                       "parameters": []
                     }
-                  ],
-                  "parameters": []
+                  ]
                 }
-              ]
+              ],
+              "parameters": []
             }
           ],
           "parameters": []
