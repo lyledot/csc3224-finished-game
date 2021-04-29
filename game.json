@@ -999,6 +999,131 @@
         "name": "snow_bush_01a_al1-1.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "snowball_014.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "snowball_014.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "snowball_024.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "snowball_024.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "snowball_044.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "snowball_044.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "snowball_054.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "snowball_054.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "snowball_064.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "snowball_064.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "flat_medal_bronze.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "flat_medal_bronze.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "flat_medal3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "flat_medal3.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "flat_medal8.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "flat_medal8.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "empty_medal.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "empty_medal.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Red Character (1).png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Red Character (1).png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/Sports pack (380 assets)/PNG/Red Team/Red Character (1).png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "file": "pain1.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "pain1.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Pirate%20Pack%20(190%20assets)%2FPNG%2FRetina%2FShip%20parts%2Fcrew%20(5).png",
+        "kind": "image",
+        "metadata": "",
+        "name": "crew (5).png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/Pirate%20Pack%20(190%20assets)%2FPNG%2FRetina%2FShip%20parts%2Fcrew%20(5).png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "file": "fight.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "fight.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -1236,6 +1361,22 @@
           "x": 704,
           "y": 14,
           "zOrder": 12,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "testText",
+          "persistentUuid": "9d7f2dc3-9eba-4e73-9290-c40bc54a9064",
+          "width": 0,
+          "x": 426,
+          "y": 491,
+          "zOrder": 13,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1522,6 +1663,25 @@
               ]
             }
           ]
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "testText",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "",
+          "font": "",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
         }
       ],
       "events": [
@@ -1712,36 +1872,55 @@
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
               "disabled": false,
               "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Toggles the sign arrow in accordance to the keyboard input",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
+              "name": "Visuals",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
                 {
-                  "type": {
-                    "inverted": false,
-                    "value": "BuiltinCommonInstructions::Or"
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
                   },
-                  "parameters": [],
-                  "subInstructions": [
+                  "comment": "Toggles the sign arrow in accordance to the keyboard input",
+                  "comment2": ""
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Options:\n0 = none selected\n1 = music\n2 = play\n3 = exit",
+                  "comment2": ""
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
                     {
                       "type": {
                         "inverted": false,
-                        "value": "BuiltinCommonInstructions::And"
+                        "value": "BuiltinCommonInstructions::Or"
                       },
                       "parameters": [],
                       "subInstructions": [
@@ -1751,109 +1930,111 @@
                             "value": "SourisSurObjet"
                           },
                           "parameters": [
-                            "ExitText",
+                            "Sound",
                             "Left",
                             "",
                             ""
                           ],
                           "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "options",
+                            "=",
+                            "1"
+                          ],
+                          "subInstructions": []
                         }
                       ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Montre"
+                      },
+                      "parameters": [
+                        "SignArrowSound",
+                        ""
+                      ],
+                      "subInstructions": []
                     },
                     {
                       "type": {
                         "inverted": false,
-                        "value": "KeyPressed"
+                        "value": "Cache"
                       },
                       "parameters": [
-                        "",
-                        "Down"
+                        "SignArrowPlay"
                       ],
                       "subInstructions": []
-                    }
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Cache"
-                  },
-                  "parameters": [
-                    "SignArrowPlay"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Montre"
-                  },
-                  "parameters": [
-                    "SignArrowExit",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarScene"
-                  },
-                  "parameters": [
-                    "exitSelected",
-                    "=",
-                    "1"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarScene"
-                  },
-                  "parameters": [
-                    "options",
-                    "=",
-                    "1"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "PlaySoundCanal"
-                  },
-                  "parameters": [
-                    "",
-                    "Menu Move.mp3",
-                    "3",
-                    "",
-                    "100\n",
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "BuiltinCommonInstructions::Or"
-                  },
-                  "parameters": [],
-                  "subInstructions": [
+                    },
                     {
                       "type": {
                         "inverted": false,
-                        "value": "BuiltinCommonInstructions::And"
+                        "value": "Cache"
+                      },
+                      "parameters": [
+                        "SignArrowExit"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "exitSelected",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "options",
+                        "=",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "PlaySoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "Menu Move.mp3",
+                        "3",
+                        "",
+                        "100\n",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BuiltinCommonInstructions::Or"
                       },
                       "parameters": [],
                       "subInstructions": [
@@ -1869,86 +2050,911 @@
                             ""
                           ],
                           "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "options",
+                            "=",
+                            "2"
+                          ],
+                          "subInstructions": []
                         }
                       ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Montre"
+                      },
+                      "parameters": [
+                        "SignArrowPlay",
+                        ""
+                      ],
+                      "subInstructions": []
                     },
                     {
                       "type": {
                         "inverted": false,
-                        "value": "KeyPressed"
+                        "value": "Cache"
+                      },
+                      "parameters": [
+                        "SignArrowSound"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Cache"
+                      },
+                      "parameters": [
+                        "SignArrowExit"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "exitSelected",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "options",
+                        "=",
+                        "2"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "PlaySoundCanal"
                       },
                       "parameters": [
                         "",
-                        "Up"
+                        "Menu Move.mp3",
+                        "3",
+                        "",
+                        "100\n",
+                        ""
                       ],
                       "subInstructions": []
                     }
-                  ]
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "SourisSurObjet"
+                          },
+                          "parameters": [
+                            "ExitText",
+                            "Left",
+                            "",
+                            ""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "options",
+                            "=",
+                            "3"
+                          ],
+                          "subInstructions": []
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Cache"
+                      },
+                      "parameters": [
+                        "SignArrowPlay"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Cache"
+                      },
+                      "parameters": [
+                        "SignArrowSound"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Montre"
+                      },
+                      "parameters": [
+                        "SignArrowExit",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "exitSelected",
+                        "=",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "options",
+                        "=",
+                        "3"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "PlaySoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "Menu Move.mp3",
+                        "3",
+                        "",
+                        "100\n",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "TextObject::String"
+                      },
+                      "parameters": [
+                        "testText",
+                        "=",
+                        "\"exit\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "If selected is music and the player presses up, it moves to exit",
+                  "comment2": ""
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BuiltinCommonInstructions::And"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "options",
+                            "=",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "KeyReleased"
+                          },
+                          "parameters": [
+                            "",
+                            "Up"
+                          ],
+                          "subInstructions": []
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "options",
+                        "=",
+                        "3"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "exitSelected",
+                        "=",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "PlaySoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "Menu Move.mp3",
+                        "3",
+                        "",
+                        "100\n",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Cache"
+                      },
+                      "parameters": [
+                        "SignArrowPlay"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Cache"
+                      },
+                      "parameters": [
+                        "SignArrowSound"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Montre"
+                      },
+                      "parameters": [
+                        "SignArrowExit",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BuiltinCommonInstructions::And"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "options",
+                            "=",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "KeyReleased"
+                          },
+                          "parameters": [
+                            "",
+                            "Down"
+                          ],
+                          "subInstructions": []
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "options",
+                        "=",
+                        "2"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "exitSelected",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "PlaySoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "Menu Move.mp3",
+                        "3",
+                        "",
+                        "100\n",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Cache"
+                      },
+                      "parameters": [
+                        "SignArrowExit"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Montre"
+                      },
+                      "parameters": [
+                        "SignArrowPlay",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Cache"
+                      },
+                      "parameters": [
+                        "SignArrowSound"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BuiltinCommonInstructions::And"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "options",
+                            "=",
+                            "2"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "KeyReleased"
+                          },
+                          "parameters": [
+                            "",
+                            "Up"
+                          ],
+                          "subInstructions": []
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "options",
+                        "=",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "exitSelected",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "PlaySoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "Menu Move.mp3",
+                        "3",
+                        "",
+                        "100\n",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Cache"
+                      },
+                      "parameters": [
+                        "SignArrowPlay"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Cache"
+                      },
+                      "parameters": [
+                        "SignArrowExit"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Montre"
+                      },
+                      "parameters": [
+                        "SignArrowSound",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BuiltinCommonInstructions::And"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "options",
+                            "=",
+                            "2"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "KeyReleased"
+                          },
+                          "parameters": [
+                            "",
+                            "Down"
+                          ],
+                          "subInstructions": []
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "options",
+                        "=",
+                        "3"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "exitSelected",
+                        "=",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "PlaySoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "Menu Move.mp3",
+                        "3",
+                        "",
+                        "100\n",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Cache"
+                      },
+                      "parameters": [
+                        "SignArrowPlay"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Cache"
+                      },
+                      "parameters": [
+                        "SignArrowSound"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Montre"
+                      },
+                      "parameters": [
+                        "SignArrowExit",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BuiltinCommonInstructions::And"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "options",
+                            "=",
+                            "3"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "KeyReleased"
+                          },
+                          "parameters": [
+                            "",
+                            "Up"
+                          ],
+                          "subInstructions": []
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "options",
+                        "=",
+                        "2"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "exitSelected",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "PlaySoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "Menu Move.mp3",
+                        "3",
+                        "",
+                        "100\n",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Cache"
+                      },
+                      "parameters": [
+                        "SignArrowExit"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Montre"
+                      },
+                      "parameters": [
+                        "SignArrowPlay",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Cache"
+                      },
+                      "parameters": [
+                        "SignArrowSound"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BuiltinCommonInstructions::And"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "options",
+                            "=",
+                            "3"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "KeyReleased"
+                          },
+                          "parameters": [
+                            "",
+                            "Down"
+                          ],
+                          "subInstructions": []
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "options",
+                        "=",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "exitSelected",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "PlaySoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "Menu Move.mp3",
+                        "3",
+                        "",
+                        "100\n",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Cache"
+                      },
+                      "parameters": [
+                        "SignArrowPlay"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Cache"
+                      },
+                      "parameters": [
+                        "SignArrowExit"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Montre"
+                      },
+                      "parameters": [
+                        "SignArrowSound",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
                 }
               ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Montre"
-                  },
-                  "parameters": [
-                    "SignArrowPlay",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Cache"
-                  },
-                  "parameters": [
-                    "SignArrowExit"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarScene"
-                  },
-                  "parameters": [
-                    "exitSelected",
-                    "=",
-                    "0"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarScene"
-                  },
-                  "parameters": [
-                    "options",
-                    "=",
-                    "0"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "PlaySoundCanal"
-                  },
-                  "parameters": [
-                    "",
-                    "Menu Move.mp3",
-                    "3",
-                    "",
-                    "100\n",
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
+              "parameters": []
             },
             {
               "disabled": false,
@@ -2481,11 +3487,12 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "RePlaySoundCanal"
+                        "value": "ModGlobalVolume"
                       },
                       "parameters": [
                         "",
-                        "0"
+                        "=",
+                        "100"
                       ],
                       "subInstructions": []
                     }
@@ -2899,7 +3906,7 @@
           "underlined": false,
           "variables": [],
           "behaviors": [],
-          "string": "             Use your ARROW KEYS \n        to move your snowball around.\n\n      Be careful to avoid the obstacles.\n             They'll make you small!\n\n         Aim to get as large as possible\nwithout hitting anything on the way down.",
+          "string": "             Use your ARROW KEYS \n        to move your snowball around.\n\n      Be careful to avoid the obstacles.\n             They'll make you small!\n\n         Aim to get as large as possible,\n                and earn all 3 medals\nwithout hitting anything on the way down.",
           "font": "",
           "characterSize": 20,
           "color": {
@@ -3696,6 +4703,11 @@
         },
         {
           "name": "powerUpChoice",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "name": "devInvincibility",
           "type": "string",
           "value": ""
         }
@@ -5608,6 +6620,1326 @@
                   ]
                 }
               ]
+            },
+            {
+              "name": "slow",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.05000000074505806,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "snowball_014.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 140.8000030517578,
+                        "y": 207.6999969482422
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 242.0709991455078,
+                            "y": 185.99400329589844
+                          },
+                          {
+                            "x": 245.28599548339844,
+                            "y": 219.86099243164062
+                          },
+                          {
+                            "x": 227.6719970703125,
+                            "y": 272.0660095214844
+                          },
+                          {
+                            "x": 208.4029998779297,
+                            "y": 296.0589904785156
+                          },
+                          {
+                            "x": 179.3699951171875,
+                            "y": 306.9779968261719
+                          },
+                          {
+                            "x": 144.26300048828125,
+                            "y": 318.25
+                          },
+                          {
+                            "x": 109.03299713134766,
+                            "y": 318.7820129394531
+                          },
+                          {
+                            "x": 67.54869842529297,
+                            "y": 302.65399169921875
+                          },
+                          {
+                            "x": 34.65840148925781,
+                            "y": 268.8059997558594
+                          },
+                          {
+                            "x": 18.604900360107422,
+                            "y": 233.80799865722656
+                          },
+                          {
+                            "x": 18.041099548339844,
+                            "y": 191.65899658203125
+                          },
+                          {
+                            "x": 26.869400024414062,
+                            "y": 170.44200134277344
+                          },
+                          {
+                            "x": 38.190799713134766,
+                            "y": 157.73500061035156
+                          },
+                          {
+                            "x": 46.56650161743164,
+                            "y": 131.38299560546875
+                          },
+                          {
+                            "x": 61.71189880371094,
+                            "y": 112.4520034790039
+                          },
+                          {
+                            "x": 86.42880249023438,
+                            "y": 98.94740295410156
+                          },
+                          {
+                            "x": 108.09200286865234,
+                            "y": 96.97010040283203
+                          },
+                          {
+                            "x": 133.46800231933594,
+                            "y": 88.14620208740234
+                          },
+                          {
+                            "x": 172.8419952392578,
+                            "y": 90.68939971923828
+                          },
+                          {
+                            "x": 212.57200622558594,
+                            "y": 113.56500244140625
+                          },
+                          {
+                            "x": 229.21600341796875,
+                            "y": 142.06500244140625
+                          },
+                          {
+                            "x": 234.24400329589844,
+                            "y": 170.14700317382812
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "snowball_024.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 140.8000030517578,
+                        "y": 207.6999969482422
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 242.0709991455078,
+                            "y": 185.99400329589844
+                          },
+                          {
+                            "x": 245.28599548339844,
+                            "y": 219.86099243164062
+                          },
+                          {
+                            "x": 227.6719970703125,
+                            "y": 272.0660095214844
+                          },
+                          {
+                            "x": 208.4029998779297,
+                            "y": 296.0589904785156
+                          },
+                          {
+                            "x": 179.3699951171875,
+                            "y": 306.9779968261719
+                          },
+                          {
+                            "x": 144.26300048828125,
+                            "y": 318.25
+                          },
+                          {
+                            "x": 109.03299713134766,
+                            "y": 318.7820129394531
+                          },
+                          {
+                            "x": 67.54869842529297,
+                            "y": 302.65399169921875
+                          },
+                          {
+                            "x": 34.65840148925781,
+                            "y": 268.8059997558594
+                          },
+                          {
+                            "x": 18.604900360107422,
+                            "y": 233.80799865722656
+                          },
+                          {
+                            "x": 18.041099548339844,
+                            "y": 191.65899658203125
+                          },
+                          {
+                            "x": 26.869400024414062,
+                            "y": 170.44200134277344
+                          },
+                          {
+                            "x": 38.190799713134766,
+                            "y": 157.73500061035156
+                          },
+                          {
+                            "x": 46.56650161743164,
+                            "y": 131.38299560546875
+                          },
+                          {
+                            "x": 61.71189880371094,
+                            "y": 112.4520034790039
+                          },
+                          {
+                            "x": 86.42880249023438,
+                            "y": 98.94740295410156
+                          },
+                          {
+                            "x": 108.09200286865234,
+                            "y": 96.97010040283203
+                          },
+                          {
+                            "x": 133.46800231933594,
+                            "y": 88.14620208740234
+                          },
+                          {
+                            "x": 172.8419952392578,
+                            "y": 90.68939971923828
+                          },
+                          {
+                            "x": 212.57200622558594,
+                            "y": 113.56500244140625
+                          },
+                          {
+                            "x": 229.21600341796875,
+                            "y": 142.06500244140625
+                          },
+                          {
+                            "x": 234.24400329589844,
+                            "y": 170.14700317382812
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "snowball_034.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 140.8000030517578,
+                        "y": 207.6999969482422
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 242.0709991455078,
+                            "y": 185.99400329589844
+                          },
+                          {
+                            "x": 245.28599548339844,
+                            "y": 219.86099243164062
+                          },
+                          {
+                            "x": 227.6719970703125,
+                            "y": 272.0660095214844
+                          },
+                          {
+                            "x": 208.4029998779297,
+                            "y": 296.0589904785156
+                          },
+                          {
+                            "x": 179.3699951171875,
+                            "y": 306.9779968261719
+                          },
+                          {
+                            "x": 144.26300048828125,
+                            "y": 318.25
+                          },
+                          {
+                            "x": 109.03299713134766,
+                            "y": 318.7820129394531
+                          },
+                          {
+                            "x": 67.54869842529297,
+                            "y": 302.65399169921875
+                          },
+                          {
+                            "x": 34.65840148925781,
+                            "y": 268.8059997558594
+                          },
+                          {
+                            "x": 18.604900360107422,
+                            "y": 233.80799865722656
+                          },
+                          {
+                            "x": 18.041099548339844,
+                            "y": 191.65899658203125
+                          },
+                          {
+                            "x": 26.869400024414062,
+                            "y": 170.44200134277344
+                          },
+                          {
+                            "x": 38.190799713134766,
+                            "y": 157.73500061035156
+                          },
+                          {
+                            "x": 46.56650161743164,
+                            "y": 131.38299560546875
+                          },
+                          {
+                            "x": 61.71189880371094,
+                            "y": 112.4520034790039
+                          },
+                          {
+                            "x": 86.42880249023438,
+                            "y": 98.94740295410156
+                          },
+                          {
+                            "x": 108.09200286865234,
+                            "y": 96.97010040283203
+                          },
+                          {
+                            "x": 133.46800231933594,
+                            "y": 88.14620208740234
+                          },
+                          {
+                            "x": 172.8419952392578,
+                            "y": 90.68939971923828
+                          },
+                          {
+                            "x": 212.57200622558594,
+                            "y": 113.56500244140625
+                          },
+                          {
+                            "x": 229.21600341796875,
+                            "y": 142.06500244140625
+                          },
+                          {
+                            "x": 234.24400329589844,
+                            "y": 170.14700317382812
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "snowball_044.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 140.8000030517578,
+                        "y": 207.6999969482422
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 242.0709991455078,
+                            "y": 185.99400329589844
+                          },
+                          {
+                            "x": 245.28599548339844,
+                            "y": 219.86099243164062
+                          },
+                          {
+                            "x": 227.6719970703125,
+                            "y": 272.0660095214844
+                          },
+                          {
+                            "x": 208.4029998779297,
+                            "y": 296.0589904785156
+                          },
+                          {
+                            "x": 179.3699951171875,
+                            "y": 306.9779968261719
+                          },
+                          {
+                            "x": 144.26300048828125,
+                            "y": 318.25
+                          },
+                          {
+                            "x": 109.03299713134766,
+                            "y": 318.7820129394531
+                          },
+                          {
+                            "x": 67.54869842529297,
+                            "y": 302.65399169921875
+                          },
+                          {
+                            "x": 34.65840148925781,
+                            "y": 268.8059997558594
+                          },
+                          {
+                            "x": 18.604900360107422,
+                            "y": 233.80799865722656
+                          },
+                          {
+                            "x": 18.041099548339844,
+                            "y": 191.65899658203125
+                          },
+                          {
+                            "x": 26.869400024414062,
+                            "y": 170.44200134277344
+                          },
+                          {
+                            "x": 38.190799713134766,
+                            "y": 157.73500061035156
+                          },
+                          {
+                            "x": 46.56650161743164,
+                            "y": 131.38299560546875
+                          },
+                          {
+                            "x": 61.71189880371094,
+                            "y": 112.4520034790039
+                          },
+                          {
+                            "x": 86.42880249023438,
+                            "y": 98.94740295410156
+                          },
+                          {
+                            "x": 108.09200286865234,
+                            "y": 96.97010040283203
+                          },
+                          {
+                            "x": 133.46800231933594,
+                            "y": 88.14620208740234
+                          },
+                          {
+                            "x": 172.8419952392578,
+                            "y": 90.68939971923828
+                          },
+                          {
+                            "x": 212.57200622558594,
+                            "y": 113.56500244140625
+                          },
+                          {
+                            "x": 229.21600341796875,
+                            "y": 142.06500244140625
+                          },
+                          {
+                            "x": 234.24400329589844,
+                            "y": 170.14700317382812
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "snowball_054.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 140.8000030517578,
+                        "y": 207.6999969482422
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 242.0709991455078,
+                            "y": 185.99400329589844
+                          },
+                          {
+                            "x": 245.28599548339844,
+                            "y": 219.86099243164062
+                          },
+                          {
+                            "x": 227.6719970703125,
+                            "y": 272.0660095214844
+                          },
+                          {
+                            "x": 208.4029998779297,
+                            "y": 296.0589904785156
+                          },
+                          {
+                            "x": 179.3699951171875,
+                            "y": 306.9779968261719
+                          },
+                          {
+                            "x": 144.26300048828125,
+                            "y": 318.25
+                          },
+                          {
+                            "x": 109.03299713134766,
+                            "y": 318.7820129394531
+                          },
+                          {
+                            "x": 67.54869842529297,
+                            "y": 302.65399169921875
+                          },
+                          {
+                            "x": 34.65840148925781,
+                            "y": 268.8059997558594
+                          },
+                          {
+                            "x": 18.604900360107422,
+                            "y": 233.80799865722656
+                          },
+                          {
+                            "x": 18.041099548339844,
+                            "y": 191.65899658203125
+                          },
+                          {
+                            "x": 26.869400024414062,
+                            "y": 170.44200134277344
+                          },
+                          {
+                            "x": 38.190799713134766,
+                            "y": 157.73500061035156
+                          },
+                          {
+                            "x": 46.56650161743164,
+                            "y": 131.38299560546875
+                          },
+                          {
+                            "x": 61.71189880371094,
+                            "y": 112.4520034790039
+                          },
+                          {
+                            "x": 86.42880249023438,
+                            "y": 98.94740295410156
+                          },
+                          {
+                            "x": 108.09200286865234,
+                            "y": 96.97010040283203
+                          },
+                          {
+                            "x": 133.46800231933594,
+                            "y": 88.14620208740234
+                          },
+                          {
+                            "x": 172.8419952392578,
+                            "y": 90.68939971923828
+                          },
+                          {
+                            "x": 212.57200622558594,
+                            "y": 113.56500244140625
+                          },
+                          {
+                            "x": 229.21600341796875,
+                            "y": 142.06500244140625
+                          },
+                          {
+                            "x": 234.24400329589844,
+                            "y": 170.14700317382812
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "snowball_064.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 140.8000030517578,
+                        "y": 207.6999969482422
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 242.0709991455078,
+                            "y": 185.99400329589844
+                          },
+                          {
+                            "x": 245.28599548339844,
+                            "y": 219.86099243164062
+                          },
+                          {
+                            "x": 227.6719970703125,
+                            "y": 272.0660095214844
+                          },
+                          {
+                            "x": 208.4029998779297,
+                            "y": 296.0589904785156
+                          },
+                          {
+                            "x": 179.3699951171875,
+                            "y": 306.9779968261719
+                          },
+                          {
+                            "x": 144.26300048828125,
+                            "y": 318.25
+                          },
+                          {
+                            "x": 109.03299713134766,
+                            "y": 318.7820129394531
+                          },
+                          {
+                            "x": 67.54869842529297,
+                            "y": 302.65399169921875
+                          },
+                          {
+                            "x": 34.65840148925781,
+                            "y": 268.8059997558594
+                          },
+                          {
+                            "x": 18.604900360107422,
+                            "y": 233.80799865722656
+                          },
+                          {
+                            "x": 18.041099548339844,
+                            "y": 191.65899658203125
+                          },
+                          {
+                            "x": 26.869400024414062,
+                            "y": 170.44200134277344
+                          },
+                          {
+                            "x": 38.190799713134766,
+                            "y": 157.73500061035156
+                          },
+                          {
+                            "x": 46.56650161743164,
+                            "y": 131.38299560546875
+                          },
+                          {
+                            "x": 61.71189880371094,
+                            "y": 112.4520034790039
+                          },
+                          {
+                            "x": 86.42880249023438,
+                            "y": 98.94740295410156
+                          },
+                          {
+                            "x": 108.09200286865234,
+                            "y": 96.97010040283203
+                          },
+                          {
+                            "x": 133.46800231933594,
+                            "y": 88.14620208740234
+                          },
+                          {
+                            "x": 172.8419952392578,
+                            "y": 90.68939971923828
+                          },
+                          {
+                            "x": 212.57200622558594,
+                            "y": 113.56500244140625
+                          },
+                          {
+                            "x": 229.21600341796875,
+                            "y": 142.06500244140625
+                          },
+                          {
+                            "x": 234.24400329589844,
+                            "y": 170.14700317382812
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "speed",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.05000000074505806,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "snowball_013.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 140.8000030517578,
+                        "y": 207.6999969482422
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 242.0709991455078,
+                            "y": 185.99400329589844
+                          },
+                          {
+                            "x": 245.28599548339844,
+                            "y": 219.86099243164062
+                          },
+                          {
+                            "x": 227.6719970703125,
+                            "y": 272.0660095214844
+                          },
+                          {
+                            "x": 208.4029998779297,
+                            "y": 296.0589904785156
+                          },
+                          {
+                            "x": 179.3699951171875,
+                            "y": 306.9779968261719
+                          },
+                          {
+                            "x": 144.26300048828125,
+                            "y": 318.25
+                          },
+                          {
+                            "x": 109.03299713134766,
+                            "y": 318.7820129394531
+                          },
+                          {
+                            "x": 67.54869842529297,
+                            "y": 302.65399169921875
+                          },
+                          {
+                            "x": 34.65840148925781,
+                            "y": 268.8059997558594
+                          },
+                          {
+                            "x": 18.604900360107422,
+                            "y": 233.80799865722656
+                          },
+                          {
+                            "x": 18.041099548339844,
+                            "y": 191.65899658203125
+                          },
+                          {
+                            "x": 26.869400024414062,
+                            "y": 170.44200134277344
+                          },
+                          {
+                            "x": 38.190799713134766,
+                            "y": 157.73500061035156
+                          },
+                          {
+                            "x": 46.56650161743164,
+                            "y": 131.38299560546875
+                          },
+                          {
+                            "x": 61.71189880371094,
+                            "y": 112.4520034790039
+                          },
+                          {
+                            "x": 86.42880249023438,
+                            "y": 98.94740295410156
+                          },
+                          {
+                            "x": 108.09200286865234,
+                            "y": 96.97010040283203
+                          },
+                          {
+                            "x": 133.46800231933594,
+                            "y": 88.14620208740234
+                          },
+                          {
+                            "x": 172.8419952392578,
+                            "y": 90.68939971923828
+                          },
+                          {
+                            "x": 212.57200622558594,
+                            "y": 113.56500244140625
+                          },
+                          {
+                            "x": 229.21600341796875,
+                            "y": 142.06500244140625
+                          },
+                          {
+                            "x": 234.24400329589844,
+                            "y": 170.14700317382812
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "snowball_023.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 140.8000030517578,
+                        "y": 207.6999969482422
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 242.0709991455078,
+                            "y": 185.99400329589844
+                          },
+                          {
+                            "x": 245.28599548339844,
+                            "y": 219.86099243164062
+                          },
+                          {
+                            "x": 227.6719970703125,
+                            "y": 272.0660095214844
+                          },
+                          {
+                            "x": 208.4029998779297,
+                            "y": 296.0589904785156
+                          },
+                          {
+                            "x": 179.3699951171875,
+                            "y": 306.9779968261719
+                          },
+                          {
+                            "x": 144.26300048828125,
+                            "y": 318.25
+                          },
+                          {
+                            "x": 109.03299713134766,
+                            "y": 318.7820129394531
+                          },
+                          {
+                            "x": 67.54869842529297,
+                            "y": 302.65399169921875
+                          },
+                          {
+                            "x": 34.65840148925781,
+                            "y": 268.8059997558594
+                          },
+                          {
+                            "x": 18.604900360107422,
+                            "y": 233.80799865722656
+                          },
+                          {
+                            "x": 18.041099548339844,
+                            "y": 191.65899658203125
+                          },
+                          {
+                            "x": 26.869400024414062,
+                            "y": 170.44200134277344
+                          },
+                          {
+                            "x": 38.190799713134766,
+                            "y": 157.73500061035156
+                          },
+                          {
+                            "x": 46.56650161743164,
+                            "y": 131.38299560546875
+                          },
+                          {
+                            "x": 61.71189880371094,
+                            "y": 112.4520034790039
+                          },
+                          {
+                            "x": 86.42880249023438,
+                            "y": 98.94740295410156
+                          },
+                          {
+                            "x": 108.09200286865234,
+                            "y": 96.97010040283203
+                          },
+                          {
+                            "x": 133.46800231933594,
+                            "y": 88.14620208740234
+                          },
+                          {
+                            "x": 172.8419952392578,
+                            "y": 90.68939971923828
+                          },
+                          {
+                            "x": 212.57200622558594,
+                            "y": 113.56500244140625
+                          },
+                          {
+                            "x": 229.21600341796875,
+                            "y": 142.06500244140625
+                          },
+                          {
+                            "x": 234.24400329589844,
+                            "y": 170.14700317382812
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "snowball_033.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 140.8000030517578,
+                        "y": 207.6999969482422
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 242.0709991455078,
+                            "y": 185.99400329589844
+                          },
+                          {
+                            "x": 245.28599548339844,
+                            "y": 219.86099243164062
+                          },
+                          {
+                            "x": 227.6719970703125,
+                            "y": 272.0660095214844
+                          },
+                          {
+                            "x": 208.4029998779297,
+                            "y": 296.0589904785156
+                          },
+                          {
+                            "x": 179.3699951171875,
+                            "y": 306.9779968261719
+                          },
+                          {
+                            "x": 144.26300048828125,
+                            "y": 318.25
+                          },
+                          {
+                            "x": 109.03299713134766,
+                            "y": 318.7820129394531
+                          },
+                          {
+                            "x": 67.54869842529297,
+                            "y": 302.65399169921875
+                          },
+                          {
+                            "x": 34.65840148925781,
+                            "y": 268.8059997558594
+                          },
+                          {
+                            "x": 18.604900360107422,
+                            "y": 233.80799865722656
+                          },
+                          {
+                            "x": 18.041099548339844,
+                            "y": 191.65899658203125
+                          },
+                          {
+                            "x": 26.869400024414062,
+                            "y": 170.44200134277344
+                          },
+                          {
+                            "x": 38.190799713134766,
+                            "y": 157.73500061035156
+                          },
+                          {
+                            "x": 46.56650161743164,
+                            "y": 131.38299560546875
+                          },
+                          {
+                            "x": 61.71189880371094,
+                            "y": 112.4520034790039
+                          },
+                          {
+                            "x": 86.42880249023438,
+                            "y": 98.94740295410156
+                          },
+                          {
+                            "x": 108.09200286865234,
+                            "y": 96.97010040283203
+                          },
+                          {
+                            "x": 133.46800231933594,
+                            "y": 88.14620208740234
+                          },
+                          {
+                            "x": 172.8419952392578,
+                            "y": 90.68939971923828
+                          },
+                          {
+                            "x": 212.57200622558594,
+                            "y": 113.56500244140625
+                          },
+                          {
+                            "x": 229.21600341796875,
+                            "y": 142.06500244140625
+                          },
+                          {
+                            "x": 234.24400329589844,
+                            "y": 170.14700317382812
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "snowball_043.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 140.8000030517578,
+                        "y": 207.6999969482422
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 242.0709991455078,
+                            "y": 185.99400329589844
+                          },
+                          {
+                            "x": 245.28599548339844,
+                            "y": 219.86099243164062
+                          },
+                          {
+                            "x": 227.6719970703125,
+                            "y": 272.0660095214844
+                          },
+                          {
+                            "x": 208.4029998779297,
+                            "y": 296.0589904785156
+                          },
+                          {
+                            "x": 179.3699951171875,
+                            "y": 306.9779968261719
+                          },
+                          {
+                            "x": 144.26300048828125,
+                            "y": 318.25
+                          },
+                          {
+                            "x": 109.03299713134766,
+                            "y": 318.7820129394531
+                          },
+                          {
+                            "x": 67.54869842529297,
+                            "y": 302.65399169921875
+                          },
+                          {
+                            "x": 34.65840148925781,
+                            "y": 268.8059997558594
+                          },
+                          {
+                            "x": 18.604900360107422,
+                            "y": 233.80799865722656
+                          },
+                          {
+                            "x": 18.041099548339844,
+                            "y": 191.65899658203125
+                          },
+                          {
+                            "x": 26.869400024414062,
+                            "y": 170.44200134277344
+                          },
+                          {
+                            "x": 38.190799713134766,
+                            "y": 157.73500061035156
+                          },
+                          {
+                            "x": 46.56650161743164,
+                            "y": 131.38299560546875
+                          },
+                          {
+                            "x": 61.71189880371094,
+                            "y": 112.4520034790039
+                          },
+                          {
+                            "x": 86.42880249023438,
+                            "y": 98.94740295410156
+                          },
+                          {
+                            "x": 108.09200286865234,
+                            "y": 96.97010040283203
+                          },
+                          {
+                            "x": 133.46800231933594,
+                            "y": 88.14620208740234
+                          },
+                          {
+                            "x": 172.8419952392578,
+                            "y": 90.68939971923828
+                          },
+                          {
+                            "x": 212.57200622558594,
+                            "y": 113.56500244140625
+                          },
+                          {
+                            "x": 229.21600341796875,
+                            "y": 142.06500244140625
+                          },
+                          {
+                            "x": 234.24400329589844,
+                            "y": 170.14700317382812
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "snowball_053.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 140.8000030517578,
+                        "y": 207.6999969482422
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 242.0709991455078,
+                            "y": 185.99400329589844
+                          },
+                          {
+                            "x": 245.28599548339844,
+                            "y": 219.86099243164062
+                          },
+                          {
+                            "x": 227.6719970703125,
+                            "y": 272.0660095214844
+                          },
+                          {
+                            "x": 208.4029998779297,
+                            "y": 296.0589904785156
+                          },
+                          {
+                            "x": 179.3699951171875,
+                            "y": 306.9779968261719
+                          },
+                          {
+                            "x": 144.26300048828125,
+                            "y": 318.25
+                          },
+                          {
+                            "x": 109.03299713134766,
+                            "y": 318.7820129394531
+                          },
+                          {
+                            "x": 67.54869842529297,
+                            "y": 302.65399169921875
+                          },
+                          {
+                            "x": 34.65840148925781,
+                            "y": 268.8059997558594
+                          },
+                          {
+                            "x": 18.604900360107422,
+                            "y": 233.80799865722656
+                          },
+                          {
+                            "x": 18.041099548339844,
+                            "y": 191.65899658203125
+                          },
+                          {
+                            "x": 26.869400024414062,
+                            "y": 170.44200134277344
+                          },
+                          {
+                            "x": 38.190799713134766,
+                            "y": 157.73500061035156
+                          },
+                          {
+                            "x": 46.56650161743164,
+                            "y": 131.38299560546875
+                          },
+                          {
+                            "x": 61.71189880371094,
+                            "y": 112.4520034790039
+                          },
+                          {
+                            "x": 86.42880249023438,
+                            "y": 98.94740295410156
+                          },
+                          {
+                            "x": 108.09200286865234,
+                            "y": 96.97010040283203
+                          },
+                          {
+                            "x": 133.46800231933594,
+                            "y": 88.14620208740234
+                          },
+                          {
+                            "x": 172.8419952392578,
+                            "y": 90.68939971923828
+                          },
+                          {
+                            "x": 212.57200622558594,
+                            "y": 113.56500244140625
+                          },
+                          {
+                            "x": 229.21600341796875,
+                            "y": 142.06500244140625
+                          },
+                          {
+                            "x": 234.24400329589844,
+                            "y": 170.14700317382812
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "snowball_063.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 140.8000030517578,
+                        "y": 207.6999969482422
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 242.0709991455078,
+                            "y": 185.99400329589844
+                          },
+                          {
+                            "x": 245.28599548339844,
+                            "y": 219.86099243164062
+                          },
+                          {
+                            "x": 227.6719970703125,
+                            "y": 272.0660095214844
+                          },
+                          {
+                            "x": 208.4029998779297,
+                            "y": 296.0589904785156
+                          },
+                          {
+                            "x": 179.3699951171875,
+                            "y": 306.9779968261719
+                          },
+                          {
+                            "x": 144.26300048828125,
+                            "y": 318.25
+                          },
+                          {
+                            "x": 109.03299713134766,
+                            "y": 318.7820129394531
+                          },
+                          {
+                            "x": 67.54869842529297,
+                            "y": 302.65399169921875
+                          },
+                          {
+                            "x": 34.65840148925781,
+                            "y": 268.8059997558594
+                          },
+                          {
+                            "x": 18.604900360107422,
+                            "y": 233.80799865722656
+                          },
+                          {
+                            "x": 18.041099548339844,
+                            "y": 191.65899658203125
+                          },
+                          {
+                            "x": 26.869400024414062,
+                            "y": 170.44200134277344
+                          },
+                          {
+                            "x": 38.190799713134766,
+                            "y": 157.73500061035156
+                          },
+                          {
+                            "x": 46.56650161743164,
+                            "y": 131.38299560546875
+                          },
+                          {
+                            "x": 61.71189880371094,
+                            "y": 112.4520034790039
+                          },
+                          {
+                            "x": 86.42880249023438,
+                            "y": 98.94740295410156
+                          },
+                          {
+                            "x": 108.09200286865234,
+                            "y": 96.97010040283203
+                          },
+                          {
+                            "x": 133.46800231933594,
+                            "y": 88.14620208740234
+                          },
+                          {
+                            "x": 172.8419952392578,
+                            "y": 90.68939971923828
+                          },
+                          {
+                            "x": 212.57200622558594,
+                            "y": 113.56500244140625
+                          },
+                          {
+                            "x": 229.21600341796875,
+                            "y": 142.06500244140625
+                          },
+                          {
+                            "x": 234.24400329589844,
+                            "y": 170.14700317382812
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -5859,6 +8191,45 @@
             "g": 0,
             "r": 0
           }
+        },
+        {
+          "name": "Human",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.025,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Red Character (1).png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "events": [
@@ -5868,7 +8239,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Variables",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -5885,7 +8256,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Variables:\n\nGLOBAL: \nscore: keeps track of the player's points\nseconds: time elapsed since playing\nmuted: boolean expression 1 = muted 0 = playing\n\nLOCAL:\nobstacleDirection: degree that the global force is applied to (270 degrees = up).\nobstacleSpeed: speed at which obstacles go up.\nsizeDecrease: how much to subtact from the scale of the snowball when it collides.\nsizeIncrease: how much to add to the scale of the snowball as the game goes on.\nspeedIncrease: how much to add to the speed of the snowball as the game goes on.\nspeedDecrease: how much to subtract to the speed of the snowball when it collides.\nsnowballSpeed: how fast the snowball goes\nstate: 0 = Game hasn't started, 1 = Game in action\ninvincibility: toggles if snowball can collide with objects or not - for DevControls. 0 = Disabled 1 = Enabled\ninvinciblityFlag: keeps track of if DevControls are enabled\nstats: toggles showing game stats - for DevControls. 0 = Disabled 1 = Enabled\nstatsFlag: keeps track of if DevControls are enabled\nseconds: stores time elapsed in-game\ntempTimer: ????\nentities: how many game objects are in the screen at any one time\nentityFlag: keeps track if object has left the screen or not\n\ncollisionFlag: keeps track if the user has collided with something for sound purposes 0 = not collided 1 = collision\n\npowerupFlag: keeps track of if the user has picked up a powerup\ninvincibilityFlag: toggles if snowball can collide with objects. 0 = disabled  1 = enabled\nslowFlag: toggles if snowball is slowed. 0 = disabled 1 = enabled\nspeedFlag: toggles if snowball is fast. 0 = disabled 1 = enabled\n\npowerUpChoice: chooses a powerup to show the user every so-and-so seconds; 0 = none 1 = invincibility 2 = slow 3 = speed\npowerUpTimer: keeps track of how often to show powerups (should be between 5 - 20 seconds)",
+              "comment": "Variables:\n\nGLOBAL: \nscore: keeps track of the player's points\nseconds: time elapsed since playing\nmuted: boolean expression 1 = muted 0 = playing\n\nLOCAL:\nobstacleDirection: degree that the global force is applied to (270 degrees = up).\nobstacleSpeed: speed at which obstacles go up.\nsizeDecrease: how much to subtact from the scale of the snowball when it collides.\nsizeIncrease: how much to add to the scale of the snowball as the game goes on.\nspeedIncrease: how much to add to the speed of the snowball as the game goes on.\nspeedDecrease: how much to subtract to the speed of the snowball when it collides.\nsnowballSpeed: how fast the snowball goes\nstate: 0 = Game hasn't started, 1 = Game in action\ninvincibility: toggles if snowball can collide with objects or not - for DevControls. 0 = Disabled 1 = Enabled\ndevInvincibility: overrides invincibility powerup\ninvinciblityFlag: keeps track of if DevControls are enabled\nstats: toggles showing game stats - for DevControls. 0 = Disabled 1 = Enabled\nstatsFlag: keeps track of if DevControls are enabled\nseconds: stores time elapsed in-game\ntempTimer: ????\nentities: how many game objects are in the screen at any one time\nentityFlag: keeps track if object has left the screen or not\n\ncollisionFlag: keeps track if the user has collided with something for sound purposes 0 = not collided 1 = collision\n\npowerupFlag: keeps track of if the user has picked up a powerup\ninvincibilityFlag: toggles if snowball can collide with objects. 0 = disabled  1 = enabled\nslowFlag: toggles if snowball is slowed. 0 = disabled 1 = enabled\nspeedFlag: toggles if snowball is fast. 0 = disabled 1 = enabled\n\npowerUpChoice: chooses a powerup to show the user every so-and-so seconds; 0 = none 1 = invincibility 2 = slow 3 = speed\npowerUpTimer: keeps track of how often to show powerups (should be between 5 - 20 seconds)",
               "comment2": ""
             },
             {
@@ -6180,6 +8551,18 @@
                     "0"
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "devInvincibility",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": []
@@ -6291,7 +8674,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "invincibilityTimer, speedTimer, slowTimer: how often the power appears\npowerupTimer: time elapsed since the selected power has been activated",
+              "comment": "invincibilityTimer, speedTimer, slowTimer: how often the power appears\npowerupTimer: time elapsed since the selected power has been activated\ngameplayTimer: how long the game has been running for (used for more obstacles)",
               "comment2": ""
             },
             {
@@ -6399,7 +8782,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Game States",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -6494,7 +8877,7 @@
               "colorR": 74,
               "creationTime": 0,
               "disabled": false,
-              "folded": true,
+              "folded": false,
               "name": "Obstacle Generation",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -6656,6 +9039,61 @@
                     {
                       "type": {
                         "inverted": false,
+                        "value": "Timer"
+                      },
+                      "parameters": [
+                        "",
+                        "7",
+                        "\"humanTimer\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": [],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "Human",
+                        "RandomInRange(30,700)",
+                        "RandomInRange(615,700)",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ResetTimer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"humanTimer\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
                         "value": "CollisionNP"
                       },
                       "parameters": [
@@ -6746,7 +9184,7 @@
               "creationTime": 0,
               "disabled": false,
               "folded": false,
-              "name": "Game Initialisation",
+              "name": "Main",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
@@ -6819,6 +9257,19 @@
                         ""
                       ],
                       "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "AddForceAL"
+                      },
+                      "parameters": [
+                        "Human",
+                        "271",
+                        "Variable(obstacleSpeed)",
+                        ""
+                      ],
+                      "subInstructions": []
                     }
                   ],
                   "events": [
@@ -6828,29 +9279,14 @@
                       "colorR": 74,
                       "creationTime": 0,
                       "disabled": false,
-                      "folded": true,
+                      "folded": false,
                       "name": "Collision Events",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
                       "events": [
                         {
                           "disabled": false,
-                          "folded": false,
-                          "type": "BuiltinCommonInstructions::Comment",
-                          "color": {
-                            "b": 109,
-                            "g": 230,
-                            "r": 255,
-                            "textB": 0,
-                            "textG": 0,
-                            "textR": 0
-                          },
-                          "comment": "If the snowball collides with any obstacles, it decreases in size and you lose points. Only collides as long as DevControls aren't enabled.",
-                          "comment2": ""
-                        },
-                        {
-                          "disabled": false,
-                          "folded": false,
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -6859,117 +9295,114 @@
                                 "value": "VarScene"
                               },
                               "parameters": [
-                                "invincibility",
+                                "devInvincibility",
                                 "=",
                                 "0"
                               ],
                               "subInstructions": []
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "If the snowball collides with any obstacles, it decreases in size and you lose points. Only collides as long as DevControls aren't enabled.",
+                              "comment2": ""
                             },
                             {
-                              "type": {
-                                "inverted": false,
-                                "value": "BuiltinCommonInstructions::Or"
-                              },
-                              "parameters": [],
-                              "subInstructions": [
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
                                 {
                                   "type": {
                                     "inverted": false,
-                                    "value": "CollisionNP"
+                                    "value": "BuiltinCommonInstructions::Or"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "CollisionNP"
+                                      },
+                                      "parameters": [
+                                        "Snowball",
+                                        "Bush",
+                                        "",
+                                        "",
+                                        ""
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "CollisionNP"
+                                      },
+                                      "parameters": [
+                                        "Snowball",
+                                        "LargeRock",
+                                        "",
+                                        "",
+                                        ""
+                                      ],
+                                      "subInstructions": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "VarScene"
+                                  },
+                                  "parameters": [
+                                    "invincibility",
+                                    "=",
+                                    "0"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ChangeScale"
                                   },
                                   "parameters": [
                                     "Snowball",
-                                    "Bush",
-                                    "",
-                                    "",
-                                    ""
+                                    "-",
+                                    "Variable(sizeDecrease)"
                                   ],
                                   "subInstructions": []
                                 },
                                 {
                                   "type": {
                                     "inverted": false,
-                                    "value": "CollisionNP"
+                                    "value": "ModVarGlobal"
                                   },
                                   "parameters": [
-                                    "Snowball",
-                                    "LargeRock",
-                                    "",
-                                    "",
-                                    ""
+                                    "score",
+                                    "-",
+                                    "5"
                                   ],
                                   "subInstructions": []
-                                }
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "ChangeScale"
-                              },
-                              "parameters": [
-                                "Snowball",
-                                "-",
-                                "Variable(sizeDecrease)"
-                              ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "ModVarGlobal"
-                              },
-                              "parameters": [
-                                "score",
-                                "-",
-                                "2"
-                              ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "ModVarScene"
-                              },
-                              "parameters": [
-                                "collisionFlag",
-                                "=",
-                                "1"
-                              ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "ResetTimer"
-                              },
-                              "parameters": [
-                                "",
-                                "\"collisionTimer\""
-                              ],
-                              "subInstructions": []
-                            }
-                          ],
-                          "events": []
-                        },
-                        {
-                          "disabled": false,
-                          "folded": false,
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "BuiltinCommonInstructions::And"
-                              },
-                              "parameters": [],
-                              "subInstructions": [
+                                },
                                 {
                                   "type": {
                                     "inverted": false,
-                                    "value": "VarScene"
+                                    "value": "ModVarScene"
                                   },
                                   "parameters": [
                                     "collisionFlag",
@@ -6980,61 +9413,176 @@
                                 },
                                 {
                                   "type": {
-                                    "inverted": true,
-                                    "value": "Timer"
+                                    "inverted": false,
+                                    "value": "ResetTimer"
                                   },
                                   "parameters": [
                                     "",
-                                    "1",
                                     "\"collisionTimer\""
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": []
+                            },
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "BuiltinCommonInstructions::And"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "VarScene"
+                                      },
+                                      "parameters": [
+                                        "collisionFlag",
+                                        "=",
+                                        "1"
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": true,
+                                        "value": "Timer"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "1",
+                                        "\"collisionTimer\""
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "VarGlobal"
+                                      },
+                                      "parameters": [
+                                        "muted",
+                                        "=",
+                                        "0"
+                                      ],
+                                      "subInstructions": []
+                                    }
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ModVarScene"
+                                  },
+                                  "parameters": [
+                                    "collisionFlag",
+                                    "=",
+                                    "0"
                                   ],
                                   "subInstructions": []
                                 },
                                 {
                                   "type": {
                                     "inverted": false,
-                                    "value": "VarGlobal"
+                                    "value": "PlaySoundCanal"
                                   },
                                   "parameters": [
-                                    "muted",
+                                    "",
+                                    "Corsica_S-Snow_Shoes-18.mp3",
+                                    "1",
+                                    "",
+                                    "50",
+                                    ""
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": []
+                            },
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "CollisionNP"
+                                  },
+                                  "parameters": [
+                                    "Snowball",
+                                    "Human",
+                                    "",
+                                    "",
+                                    ""
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "VarScene"
+                                  },
+                                  "parameters": [
+                                    "invincibility",
                                     "=",
                                     "0"
                                   ],
                                   "subInstructions": []
                                 }
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "ModVarScene"
-                              },
-                              "parameters": [
-                                "collisionFlag",
-                                "=",
-                                "0"
                               ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "PlaySoundCanal"
-                              },
-                              "parameters": [
-                                "",
-                                "Corsica_S-Snow_Shoes-18.mp3",
-                                "1",
-                                "",
-                                "50",
-                                ""
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ChangeScale"
+                                  },
+                                  "parameters": [
+                                    "Snowball",
+                                    "-",
+                                    "Variable(sizeDecrease)"
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "PlaySoundCanal"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "pain1.wav",
+                                    "1",
+                                    "",
+                                    "50",
+                                    ""
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ModVarGlobal"
+                                  },
+                                  "parameters": [
+                                    "score",
+                                    "-",
+                                    "5"
+                                  ],
+                                  "subInstructions": []
+                                }
                               ],
-                              "subInstructions": []
+                              "events": []
                             }
-                          ],
-                          "events": []
+                          ]
                         },
                         {
                           "disabled": false,
@@ -7345,6 +9893,19 @@
                                 ""
                               ],
                               "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModPitchSoundChannel"
+                              },
+                              "parameters": [
+                                "",
+                                "0",
+                                "=",
+                                "1"
+                              ],
+                              "subInstructions": []
                             }
                           ],
                           "events": []
@@ -7375,7 +9936,7 @@
                             "textG": 0,
                             "textR": 0
                           },
-                          "comment": "powerUpTimer must be greater than 5-15 seconds before the game chooses a powerup to show",
+                          "comment": "powerUpTimer must be greater than 5-20 secs before the game chooses a powerup to show",
                           "comment2": ""
                         },
                         {
@@ -7390,7 +9951,7 @@
                               },
                               "parameters": [
                                 "",
-                                "2",
+                                "RandomInRange(5,20)",
                                 "\"powerUpTimer\""
                               ],
                               "subInstructions": []
@@ -7427,9 +9988,35 @@
                                 "\"cooldownTimer\""
                               ],
                               "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ResetTimer"
+                              },
+                              "parameters": [
+                                "",
+                                "\"powerUpTimer\""
+                              ],
+                              "subInstructions": []
                             }
                           ],
                           "events": []
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "If powerUpChoice is 1, release an invincibility powerUp",
+                          "comment2": ""
                         },
                         {
                           "disabled": false,
@@ -7451,21 +10038,6 @@
                           ],
                           "actions": [],
                           "events": [
-                            {
-                              "disabled": false,
-                              "folded": false,
-                              "type": "BuiltinCommonInstructions::Comment",
-                              "color": {
-                                "b": 109,
-                                "g": 230,
-                                "r": 255,
-                                "textB": 0,
-                                "textG": 0,
-                                "textR": 0
-                              },
-                              "comment": "If powerUpChoice is 1, release an invincibility powerUp",
-                              "comment2": ""
-                            },
                             {
                               "colorB": 228,
                               "colorG": 176,
@@ -7651,6 +10223,21 @@
                                         "1"
                                       ],
                                       "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "PlaySoundCanal"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "fight.wav",
+                                        "4",
+                                        "",
+                                        "50",
+                                        ""
+                                      ],
+                                      "subInstructions": []
                                     }
                                   ],
                                   "events": []
@@ -7711,7 +10298,7 @@
                                     "textG": 0,
                                     "textR": 0
                                   },
-                                  "comment": "Invincibility only lasts 5 seconds",
+                                  "comment": "Invincibility only lasts 3 seconds",
                                   "comment2": ""
                                 },
                                 {
@@ -7746,9 +10333,17 @@
                                           },
                                           "parameters": [
                                             "",
-                                            "5",
+                                            "3",
                                             "\"invincibilityTimer\""
                                           ],
+                                          "subInstructions": []
+                                        },
+                                        {
+                                          "type": {
+                                            "inverted": false,
+                                            "value": "BuiltinCommonInstructions::Once"
+                                          },
+                                          "parameters": [],
                                           "subInstructions": []
                                         }
                                       ],
@@ -7798,6 +10393,17 @@
                                             "\"invincibilityTimer\""
                                           ],
                                           "subInstructions": []
+                                        },
+                                        {
+                                          "type": {
+                                            "inverted": false,
+                                            "value": "StopSoundCanal"
+                                          },
+                                          "parameters": [
+                                            "",
+                                            "4"
+                                          ],
+                                          "subInstructions": []
                                         }
                                       ],
                                       "events": []
@@ -7808,6 +10414,21 @@
                               "parameters": []
                             }
                           ]
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "If powerUpChoice is 2, release a slow powerUp",
+                          "comment2": ""
                         },
                         {
                           "disabled": false,
@@ -7830,27 +10451,12 @@
                           "actions": [],
                           "events": [
                             {
-                              "disabled": false,
-                              "folded": false,
-                              "type": "BuiltinCommonInstructions::Comment",
-                              "color": {
-                                "b": 109,
-                                "g": 230,
-                                "r": 255,
-                                "textB": 0,
-                                "textG": 0,
-                                "textR": 0
-                              },
-                              "comment": "If powerUpChoice is 2, release an slow powerUp",
-                              "comment2": ""
-                            },
-                            {
                               "colorB": 228,
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
                               "disabled": false,
-                              "folded": true,
+                              "folded": false,
                               "name": "Slow",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
@@ -8002,11 +10608,12 @@
                                     {
                                       "type": {
                                         "inverted": false,
-                                        "value": "SetAnimationName"
+                                        "value": "ChangeAnimation"
                                       },
                                       "parameters": [
                                         "Snowball",
-                                        "\"invincible\""
+                                        "=",
+                                        "2"
                                       ],
                                       "subInstructions": []
                                     },
@@ -8041,6 +10648,19 @@
                                       "parameters": [
                                         "",
                                         "\"slowTimer\""
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "ModPitchSoundChannel"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "0",
+                                        "=",
+                                        "0.5"
                                       ],
                                       "subInstructions": []
                                     }
@@ -8103,7 +10723,7 @@
                                     "textG": 0,
                                     "textR": 0
                                   },
-                                  "comment": "Slow only lasts 5 seconds",
+                                  "comment": "Slow lasts 7 seconds",
                                   "comment2": ""
                                 },
                                 {
@@ -8138,7 +10758,7 @@
                                           },
                                           "parameters": [
                                             "",
-                                            "5",
+                                            "7",
                                             "\"slowTimer\""
                                           ],
                                           "subInstructions": []
@@ -8204,6 +10824,19 @@
                                             "\"slowTimer\""
                                           ],
                                           "subInstructions": []
+                                        },
+                                        {
+                                          "type": {
+                                            "inverted": false,
+                                            "value": "ModPitchSoundChannel"
+                                          },
+                                          "parameters": [
+                                            "",
+                                            "0",
+                                            "=",
+                                            "1"
+                                          ],
+                                          "subInstructions": []
                                         }
                                       ],
                                       "events": []
@@ -8214,6 +10847,21 @@
                               "parameters": []
                             }
                           ]
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "If powerUpChoice is 1, release a speed powerUp",
+                          "comment2": ""
                         },
                         {
                           "disabled": false,
@@ -8236,46 +10884,16 @@
                           "actions": [],
                           "events": [
                             {
-                              "disabled": false,
-                              "folded": false,
-                              "type": "BuiltinCommonInstructions::Comment",
-                              "color": {
-                                "b": 109,
-                                "g": 230,
-                                "r": 255,
-                                "textB": 0,
-                                "textG": 0,
-                                "textR": 0
-                              },
-                              "comment": "If powerUpChoice is 1, release an speed powerUp",
-                              "comment2": ""
-                            },
-                            {
                               "colorB": 228,
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
                               "disabled": false,
-                              "folded": true,
+                              "folded": false,
                               "name": "Speed",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
                               "events": [
-                                {
-                                  "disabled": false,
-                                  "folded": false,
-                                  "type": "BuiltinCommonInstructions::Comment",
-                                  "color": {
-                                    "b": 109,
-                                    "g": 230,
-                                    "r": 255,
-                                    "textB": 0,
-                                    "textG": 0,
-                                    "textR": 0
-                                  },
-                                  "comment": "Speed appears every 6 seconds, moves up in the scene.",
-                                  "comment2": ""
-                                },
                                 {
                                   "disabled": false,
                                   "folded": false,
@@ -8427,7 +11045,7 @@
                                       },
                                       "parameters": [
                                         "Snowball",
-                                        "\"invincible\""
+                                        "\"speed\""
                                       ],
                                       "subInstructions": []
                                     },
@@ -8462,6 +11080,19 @@
                                         "entities",
                                         "-",
                                         "1"
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "ModPitchSoundChannel"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "0",
+                                        "=",
+                                        "1.5"
                                       ],
                                       "subInstructions": []
                                     }
@@ -8524,7 +11155,7 @@
                                     "textG": 0,
                                     "textR": 0
                                   },
-                                  "comment": "Slow only lasts 5 seconds",
+                                  "comment": "Speed only lasts 5 seconds",
                                   "comment2": ""
                                 },
                                 {
@@ -8623,6 +11254,19 @@
                                           "parameters": [
                                             "",
                                             "\"speedTimer\""
+                                          ],
+                                          "subInstructions": []
+                                        },
+                                        {
+                                          "type": {
+                                            "inverted": false,
+                                            "value": "ModPitchSoundChannel"
+                                          },
+                                          "parameters": [
+                                            "",
+                                            "0",
+                                            "=",
+                                            "1"
                                           ],
                                           "subInstructions": []
                                         }
@@ -8858,7 +11502,7 @@
                         "value": "VarScene"
                       },
                       "parameters": [
-                        "invincibility",
+                        "devInvincibility",
                         "=",
                         "0"
                       ],
@@ -8884,7 +11528,7 @@
                         "value": "ModVarScene"
                       },
                       "parameters": [
-                        "invincibility",
+                        "devInvincibility",
                         "=",
                         "1"
                       ],
@@ -8939,7 +11583,7 @@
                         "value": "VarScene"
                       },
                       "parameters": [
-                        "invincibility",
+                        "devInvincibility",
                         "=",
                         "1"
                       ],
@@ -8965,7 +11609,7 @@
                         "value": "ModVarScene"
                       },
                       "parameters": [
-                        "invincibility",
+                        "devInvincibility",
                         "=",
                         "0"
                       ],
@@ -9316,8 +11960,8 @@
           "name": "GameOverText",
           "persistentUuid": "a3fafa5f-6ffd-4055-9444-5175abd5e465",
           "width": 0,
-          "x": 170,
-          "y": 155,
+          "x": 169,
+          "y": 95,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -9333,7 +11977,7 @@
           "persistentUuid": "d1ad0304-285e-4016-8b70-bfbf9c806b0c",
           "width": 0,
           "x": 355,
-          "y": 345,
+          "y": 278,
           "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
@@ -9349,7 +11993,7 @@
           "persistentUuid": "e110d198-069e-492a-bf6a-d29b09d6bcbb",
           "width": 0,
           "x": 300,
-          "y": 275,
+          "y": 208,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -9365,7 +12009,7 @@
           "persistentUuid": "e4fa94be-a123-4d19-88e1-b20a0bf7d320",
           "width": 0,
           "x": 300,
-          "y": 375,
+          "y": 308,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -9381,7 +12025,7 @@
           "persistentUuid": "5efa801c-345f-4cba-bc03-711288e85551",
           "width": 0,
           "x": 300,
-          "y": 340,
+          "y": 273,
           "zOrder": 7,
           "numberProperties": [],
           "stringProperties": [],
@@ -9397,7 +12041,7 @@
           "persistentUuid": "24fb9823-ba41-4bd1-8a72-30a515a2bdbb",
           "width": 0,
           "x": 355,
-          "y": 380,
+          "y": 313,
           "zOrder": 8,
           "numberProperties": [],
           "stringProperties": [],
@@ -9413,8 +12057,104 @@
           "persistentUuid": "03757888-fb42-4ef3-acc6-e00f6652caf3",
           "width": 0,
           "x": 295,
-          "y": 303,
+          "y": 236,
           "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "BronzeMedal",
+          "persistentUuid": "818f091a-efe4-4ef4-aae4-e886ea8611d4",
+          "width": 0,
+          "x": 266,
+          "y": 400,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "SilverMedal",
+          "persistentUuid": "a96d0a1f-f8cf-46bc-ad95-49eedb18b568",
+          "width": 0,
+          "x": 389,
+          "y": 400,
+          "zOrder": 11,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "GoldMedal",
+          "persistentUuid": "72ccf4ef-7384-4154-8b01-0aca5ae2242f",
+          "width": 0,
+          "x": 506,
+          "y": 400,
+          "zOrder": 12,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "MedalText",
+          "persistentUuid": "4d97bae5-3d14-4a33-943f-3d61548ac9c7",
+          "width": 0,
+          "x": 258,
+          "y": 490,
+          "zOrder": 14,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "QuestionMarks",
+          "persistentUuid": "f3676fcf-a900-41ab-9c56-29ccae872497",
+          "width": 0,
+          "x": 282,
+          "y": 445,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "QuestionMarks",
+          "persistentUuid": "8dd841d8-8f76-4498-a984-24cb0ce5be88",
+          "width": 0,
+          "x": 282,
+          "y": 445,
+          "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -9593,6 +12333,200 @@
             "g": 0,
             "r": 0
           }
+        },
+        {
+          "name": "BronzeMedal",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "flat_medal_bronze.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "SilverMedal",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "flat_medal3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "GoldMedal",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "flat_medal8.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "EmptyMedal",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "empty_medal.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "MedalText",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "Bronze           Silver              Gold\n  500               2500              5000",
+          "font": "",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "QuestionMarks",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "?                    ?                   ?",
+          "font": "",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
         }
       ],
       "events": [
@@ -9697,7 +12631,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "Game States",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -10135,6 +13069,116 @@
                   },
                   "parameters": [
                     ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "disabled": false,
+          "folded": false,
+          "name": "Achievements",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarGlobal"
+                  },
+                  "parameters": [
+                    "score",
+                    "<",
+                    "500"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "BronzeMedal"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarGlobal"
+                  },
+                  "parameters": [
+                    "score",
+                    "<",
+                    "2500"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "SilverMedal"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarGlobal"
+                  },
+                  "parameters": [
+                    "score",
+                    "<",
+                    "5000"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "GoldMedal"
                   ],
                   "subInstructions": []
                 }
